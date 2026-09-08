@@ -1,0 +1,23 @@
+.my-bookings-wrapper { padding: 1.5rem 1rem 2rem; }
+.my-bookings-wrapper h1 { margin: 0 0 1rem; font-size: 1.75rem; }
+.state { padding: .75rem 1rem; background: var(--color-surface); border: 1px solid var(--border-color); border-radius: .5rem; }
+.state.error { border-color: #c0392b; color: #e74c3c; }
+
+.bookings-list { display: grid; gap: .4rem; }
+.bookings-list .header, .bookings-list .row { display: grid; grid-template-columns: 110px 1fr 1.1fr .9fr .9fr 140px; gap: .5rem; align-items: center; }
+.bookings-list .header { font-weight: 600; padding: .55rem .75rem; background: var(--color-surface); border: 1px solid var(--border-color); border-radius: .5rem; }
+.bookings-list .row { padding: .65rem .75rem; background: #181818; border: 1px solid #252525; border-radius: .5rem; font-size: .92rem; }
+.bookings-list .row:hover { border-color: var(--border-color); }
+
+.status { padding: .25rem .5rem; border-radius: .4rem; font-size: .75rem; letter-spacing: .5px; }
+.status.confirmed { background: #14532d; color: #e2ffe2; }
+.status.cancelled { background: #4b1d1d; color: #ffb4b4; }
+
+.cancel-btn { background: #3d1d1d; color: #ffb4b4; border: 1px solid #6b2c2c; padding: .45rem .8rem; border-radius: .5rem; cursor: pointer; font-size: .8rem; }
+.cancel-btn:hover:not(:disabled), .cancel-btn:focus-visible:not(:disabled) { background: #5a2b2b; }
+.cancel-btn:disabled { opacity: .55; cursor: not-allowed; }
+
+@media (max-width: 760px) {
+  .bookings-list .header, .bookings-list .row { grid-template-columns: 80px 1fr 1fr .8fr .8fr 110px; font-size: .75rem; }
+  .bookings-list .row { padding: .5rem .55rem; }
+}

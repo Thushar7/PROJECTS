@@ -1,0 +1,27 @@
+<footer class="app-footer" aria-labelledby="footer-heading">
+  <h2 id="footer-heading" class="visually-hidden">Site footer</h2>
+  <div class="footer-inner">
+    <div class="brand-block">
+      <div class="logo-inline">
+        <img src="/CineTix_Logo.jpg" alt="CineTix" class="logo" />
+        <span class="brand">CineTix</span>
+      </div>
+      <p class="tagline">Your gateway to the big screen.</p>
+    </div>
+    <div class="links-grid">
+      @for (g of groups(); track g.heading) {
+        <div class="link-group">
+          <h3 class="group-heading">{{ g.heading }}</h3>
+          <ul>
+            @for (item of g.items; track item) {
+              <li><span class="dummy" role="link" aria-disabled="true" tabindex="0">{{ item }}</span></li>
+            }
+          </ul>
+        </div>
+      }
+    </div>
+  </div>
+  <div class="subfooter">
+    <p>&copy; <span>{{ year }}</span> CineTix. All rights reserved.</p>
+  </div>
+</footer>

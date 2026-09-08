@@ -1,0 +1,52 @@
+<div class="modal-backdrop" (click)="emitClose()" aria-hidden="true"></div>
+<div class="modal" role="dialog" aria-modal="true" aria-label="Booking confirmation ticket">
+  <div class="modal-inner">
+  <button class="close-btn" (click)="emitClose()" aria-label="Close ticket">×</button>
+    <div #ticketRef class="ticket wide" tabindex="0" aria-label="Movie ticket">
+      <div class="panel main">
+        <div class="poster" *ngIf="posterSrc; else noPoster"><img [src]="posterSrc" [alt]="movie.title + ' poster'" /></div>
+        <ng-template #noPoster><div class="poster placeholder">{{ movie.title.charAt(0) }}</div></ng-template>
+        <div class="details">
+          <div class="line movie-title">{{ movie.title }}</div>
+          <div class="meta-line">
+            <span>{{ theatre.name }}</span>
+            <span>• {{ (theatre.city || '') + (theatre.city && theatre.state ? ', ' : '') + (theatre.state || '') }}</span>
+          </div>
+          <div class="schedule-line">
+            <span>{{ showtime.showDate }}</span>
+            <span class="dot">•</span>
+            <span>{{ formatTime(showtime.startTime) }} - {{ formatTime(showtime.endTime) }}</span>
+          </div>
+          <div class="seats-line">
+            Seats: <strong>{{ booking.seatNumbers.join(', ') }}</strong>
+          </div>
+          <div class="price-line">
+            Total: <strong>{{ booking.totalAmount | currency:'USD':'symbol':'1.0-0' }}</strong>
+          </div>
+          <div class="user-line">Booked by: {{ userName() }}</div>
+        </div>
+      </div>
+      <div class="perforation" aria-hidden="true"></div>
+      <div class="panel stub" aria-label="Ticket stub">
+        <div class="stub-section">
+          <div class="stub-label">Show</div>
+          <div class="stub-value">{{ formatTime(showtime.startTime) }}</div>
+          <div class="stub-sub">{{ showtime.showDate }}</div>
+        </div>
+        <div class="stub-section">
+          <div class="stub-label">Seats</div>
+          <div class="stub-value small">{{ booking.seatNumbers.join(', ') }}</div>
+        </div>
+        <div class="stub-section">
+          <div class="stub-label">ID</div>
+          <div class="stub-value">#{{ booking.bookingId }}</div>
+        </div>
+        <div class="qr placeholder" aria-hidden="true">QR</div>
+      </div>
+    </div>
+    <div class="actions">
+      <button (click)="downloadPdf()" class="primary">Download PDF</button>
+  <button (click)="emitClose()">Close</button>
+    </div>
+  </div>
+</div>

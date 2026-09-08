@@ -1,0 +1,16 @@
+<section class="hero" [style.background-image]="backgroundImage ? 'url(' + backgroundImage + ')' : 'none'" role="banner">
+  <div class="overlay"></div>
+  <div class="content">
+    <h1>{{ title }}</h1>
+    @if (subtitle) {
+      <p class="subtitle">{{ subtitle }}</p>
+    }
+    @if (ctaText) {
+      @if (ctaLink) {
+        <a class="cta-btn" [attr.aria-label]="ctaAriaLabel || ctaText" [routerLink]="ctaLink">{{ ctaText }}</a>
+      } @else {
+        <button class="cta-btn" type="button" [attr.aria-label]="ctaAriaLabel || ctaText">{{ ctaText }}</button>
+      }
+    }
+  </div>
+</section>

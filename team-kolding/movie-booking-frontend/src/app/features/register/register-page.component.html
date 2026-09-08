@@ -1,0 +1,56 @@
+<div class="auth-wrapper multi-step" [attr.data-step]="step">
+  <h1>Register</h1>
+  <!-- Step Indicators (optional simple) -->
+  <ol class="steps" aria-label="Registration progress">
+    <li [class.active]="step === 1">Account</li>
+    <li [class.active]="step === 2">Preferences</li>
+  </ol>
+
+  <!-- Step 1: Credentials -->
+  @if (step === 1) {
+    <form (ngSubmit)="nextStep()" #credForm="ngForm" class="slide" novalidate>
+      <label>Username
+        <input name="username" [(ngModel)]="username" required />
+      </label>
+      <label>Email
+        <input name="email" type="email" [(ngModel)]="email" required />
+      </label>
+      <label>Password
+        <input name="password" type="password" [(ngModel)]="password" required minlength="4" />
+      </label>
+      @if (auth.error()) { <div class="error">{{ auth.error() }}</div> }
+      <div class="actions">
+        <button type="submit" [disabled]="auth.loading() || credForm.invalid">Continue</button>
+      </div>
+    </form>
+  }
+
+  <!-- Step 2: Preferences -->
+  @if (step === 2) {
+    <form (ngSubmit)="finalizeRegistration()" #prefForm="ngForm" class="slide" novalidate>
+      <fieldset class="prefs">
+        <legend>Tell us your preferences</legend>
+        <label>Preferred Genre
+          <select name="genrePreference" [(ngModel)]="genrePreference">
+            <option value="">-- None --</option>
+            @for (g of genres(); track g) { <option [value]="g">{{ g }}</option> }
+          </select>
+        </label>
+        <label>Preferred Language
+          <select name="languagePreference" [(ngModel)]="languagePreference">
+            <option value="">-- None --</option>
+            @for (l of languages(); track l) { <option [value]="l">{{ l }}</option> }
+          </select>
+        </label>
+      </fieldset>
+      @if (auth.error()) { <div class="error">{{ auth.error() }}</div> }
+      <div class="actions">
+        <button type="button" class="secondary" (click)="backStep()" [disabled]="auth.loading()">Back</button>
+        <!-- <button type="button" class="secondary" (click)="skipPreferences()" [disabled]="auth.loading()">Skip for now</button> -->
+        <button type="submit" [disabled]="auth.loading()">{{ auth.loading() ? 'Registering...' : 'Finish' }}</button>
+      </div>
+    </form>
+  }
+
+  <p class="alt">Already have an account? <a routerLink="/login">Login</a></p>
+</div>

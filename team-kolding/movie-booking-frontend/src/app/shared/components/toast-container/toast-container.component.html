@@ -1,0 +1,12 @@
+<div class="toast-container" aria-live="assertive" aria-atomic="true">
+  @for (t of toasts(); track t.id) {
+    <div class="toast" [class.toast-info]="t.type==='info'" [class.toast-success]="t.type==='success'" [class.toast-warning]="t.type==='warning'" [class.toast-error]="t.type==='error'" role="alert" tabindex="0">
+      <div class="toast-body">
+        <span class="icon" aria-hidden="true">{{ iconFor(t.type) }}</span>
+        <span class="msg">{{ t.message }}</span>
+        @if (t.dismissible) { <button type="button" class="close-btn" (click)="dismiss(t.id)" aria-label="Close">×</button> }
+      </div>
+      <div class="progress" [style.animation-duration.ms]="t.autoCloseMs"></div>
+    </div>
+  }
+</div>

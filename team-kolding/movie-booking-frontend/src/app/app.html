@@ -1,0 +1,53 @@
+<header class="site-header">
+  <a class="logo" routerLink="/" aria-label="Movie Booking Home">
+    <img src="/CineTix_Logo.jpg" alt="CineTix logo" class="logo-img" />
+    <span class="brand-text">CineTix</span>
+  </a>
+  <nav aria-label="Main navigation">
+    <ul class="nav-list">
+	<li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" ariaCurrentWhenActive="page">Home</a></li>
+      <li class="movies-nav" (mouseenter)="openMega()" (mouseleave)="scheduleMegaClose()">
+        <a routerLink="/movies" routerLinkActive="active" ariaCurrentWhenActive="page">Movies</a>
+      </li>
+      <!-- Admin link (visible only if user has ADMIN role) -->
+      @if (auth.hasRole('admin')) {
+        <li><a routerLink="/admin" routerLinkActive="active" ariaCurrentWhenActive="page">Admin Dashboard</a></li>
+      }
+      <!-- Auth dependent links -->
+      @if (auth.user()) {
+        <li class="profile-wrapper">
+          <button type="button" class="profile-trigger" aria-haspopup="menu" [attr.aria-expanded]="profileOpen()" (click)="toggleProfileMenu()">
+            <span class="avatar" aria-hidden="true">👤</span>
+            <span class="username">{{ auth.user()?.username }}</span>
+            <span class="chevron" [class.open]="profileOpen()">▾</span>
+          </button>
+          @if (profileOpen()) {
+            <ul class="profile-menu" role="menu">
+              <li role="none"><a role="menuitem" routerLink="/profile" (click)="closeProfileMenu()">Profile</a></li>
+              @if (!auth.hasRole('ADMIN')) {
+                <li role="none"><a role="menuitem" routerLink="/my-bookings" (click)="closeProfileMenu()">My Bookings</a></li>
+              }
+              <li role="none"><button role="menuitem" type="button" (click)="onLogout()">Logout</button></li>
+            </ul>
+          }
+        </li>
+      } @else {
+        <li><a routerLink="/login" (click)="captureReturnUrl()">Login/Register</a></li>
+        <!-- <li><a routerLink="/register" (click)="captureReturnUrl()">Register</a></li> -->
+      }
+      @if (auth.user()) {
+        <li class="notif-nav">
+          <app-notification-bell></app-notification-bell>
+        </li>
+      }
+    </ul>
+  </nav>
+  @if (megaOpen()) {
+    <div class="mega-container" (mouseenter)="openMega()" (mouseleave)="scheduleMegaClose()">
+      <app-movies-mega-menu #megaMenu (selectGenre)="onGenreSelect($event)" (selectLanguage)="onLanguageSelect($event)"></app-movies-mega-menu>
+    </div>
+  }
+</header>
+<router-outlet />
+<app-footer />
+<app-toast-container />

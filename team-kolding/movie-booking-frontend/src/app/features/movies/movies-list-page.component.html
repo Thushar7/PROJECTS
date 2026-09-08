@@ -1,0 +1,56 @@
+<div class="movies-page">
+  <aside class="filters" aria-label="Filters">
+    <div class="filter-group">
+      <label for="search">Search</label>
+      <input id="search" type="text" placeholder="Search movies" (input)="onSearchChange($any($event.target).value)" />
+    </div>
+    <fieldset class="filter-group">
+      <legend>Genres</legend>
+      <div class="chips">
+        @if (facetGenres().length === 0) {
+          <p class="empty small">No genres available.</p>
+        } @else {
+          @for (g of facetGenres(); track g) {
+            <button type="button" class="chip" [class.chip--active]="filters['vm']().filters.genres.includes(g)" (click)="filters.toggleGenre(g)">{{ g }}</button>
+          }
+        }
+      </div>
+    </fieldset>
+    <fieldset class="filter-group">
+      <legend>Languages</legend>
+      <div class="chips">
+        @if (facetLanguages().length === 0) {
+          <p class="empty small">No languages available.</p>
+        } @else {
+          @for (l of facetLanguages(); track l) {
+            <button type="button" class="chip" [class.chip--active]="filters['vm']().filters.languages.includes(l)" (click)="filters.toggleLanguage(l)">{{ l }}</button>
+          }
+        }
+      </div>
+    </fieldset>
+    <button type="button" class="clear-btn" (click)="filters.clearFilters()">Clear Filters</button>
+  </aside>
+
+  <section class="results" aria-live="polite">
+    @if (filters.vm().filtered.length === 0) {
+      <p class="empty">No movies match your filters.</p>
+    } @else {
+      <div class="results-grid">
+        @for (m of filters.vm().filtered; track m.id) {
+          <app-movie-card [movie]="m" />
+        }
+      </div>
+      @if (totalPages() > 1) {
+        <nav class="pagination" aria-label="Pagination">
+          <button type="button" class="page-btn prev" [disabled]="currentPage() === 0" (click)="prevPage()">Prev</button>
+          <div class="page-list">
+            @for (p of pageNumbers(); track p) {
+              <button type="button" class="page-btn" [class.active]="p === currentPage()" (click)="goToPage(p)">{{ p + 1 }}</button>
+            }
+          </div>
+          <button type="button" class="page-btn next" [disabled]="currentPage() === totalPages() - 1" (click)="nextPage()">Next</button>
+        </nav>
+      }
+    }
+  </section>
+</div>

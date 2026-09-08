@@ -1,0 +1,33 @@
+<div class="notif-wrapper">
+  <button type="button" class="bell-btn" (click)="toggle()" aria-haspopup="true" [attr.aria-expanded]="open()">
+    <span class="icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M12 2c-1.657 0-3 1.343-3 3v1.07A7.002 7.002 0 0 0 6 13l-.8 2.4A1 1 0 0 0 6.153 17h11.694a1 1 0 0 0 .953-1.6L18 13a7.002 7.002 0 0 0-3-6.93V5c0-1.657-1.343-3-3-3Z" fill="currentColor"/><path d="M9 19a3 3 0 0 0 6 0H9Z" fill="currentColor"/></svg>
+    </span>
+    @if (unreadCount() > 0) { <span class="badge" aria-label="{{ unreadCount() }} unread notifications">{{ unreadCount() }}</span> }
+  </button>
+  @if (open()) {
+    <div class="panel" role="dialog" aria-label="Notifications">
+      <div class="panel-header">
+        <div class="title">Notifications</div>
+      </div>
+      <div class="panel-body" [class.loading]="loading()">
+        @if (loading()) {
+          <div class="state">Loading…</div>
+        } @else if (error()) {
+          <div class="state error">{{ error() }}</div>
+        } @else if (!items().length) {
+          <div class="state empty">No notifications</div>
+        } @else {
+          <ul class="notif-list">
+            @for (n of items(); track n.id) {
+              <li class="notif-item" [class.unread]="!readIds().has(n.id)">
+                <div class="msg">{{ n.message }}</div>
+                <div class="meta">{{ formatTime(n.createdAt) }} • {{ n.event }}</div>
+              </li>
+            }
+          </ul>
+        }
+      </div>
+    </div>
+  }
+</div>

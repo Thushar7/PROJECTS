@@ -1,0 +1,211 @@
+2025-10-15 15:25:21.508 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-10-15 15:25:21.701 INFO  [main] n.c.m.c.LanguageControllerTest - Starting LanguageControllerTest using Java 21.0.8 with PID 4516 (started by 10840583 in C:\Users\10840583\Downloads\team-kolding\movie-service)
+2025-10-15 15:25:21.703 INFO  [main] n.c.m.c.LanguageControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-10-15 15:25:25.508 INFO  [main] o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-10-15 15:25:25.535 INFO  [main] o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-10-15 15:25:25.540 INFO  [main] o.s.t.w.s.TestDispatcherServlet - Completed initialization in 5 ms
+2025-10-15 15:25:25.586 INFO  [main] n.c.m.c.LanguageControllerTest - Started LanguageControllerTest in 5.183 seconds (process running for 7.876)
+2025-10-15 15:25:26.062 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [nexi.cinetix.movie_service.controller.MovieControllerTest]: MovieControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-10-15 15:25:26.070 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration nexi.cinetix.movie_service.MovieServiceApplication for test class nexi.cinetix.movie_service.controller.MovieControllerTest
+2025-10-15 15:25:26.095 INFO  [main] n.c.m.controller.MovieControllerTest - Starting MovieControllerTest using Java 21.0.8 with PID 4516 (started by 10840583 in C:\Users\10840583\Downloads\team-kolding\movie-service)
+2025-10-15 15:25:26.095 INFO  [main] n.c.m.controller.MovieControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-10-15 15:25:26.405 INFO  [main] o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-10-15 15:25:26.405 INFO  [main] o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-10-15 15:25:26.405 INFO  [main] o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2025-10-15 15:25:26.415 INFO  [main] n.c.m.controller.MovieControllerTest - Started MovieControllerTest in 0.343 seconds (process running for 8.704)
+2025-10-15 15:25:26.621 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [nexi.cinetix.movie_service.repository.MovieGenreRepositoryTest]: MovieGenreRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-10-15 15:25:26.649 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration nexi.cinetix.movie_service.MovieServiceApplication for test class nexi.cinetix.movie_service.repository.MovieGenreRepositoryTest
+2025-10-15 15:25:26.675 INFO  [main] n.c.m.r.MovieGenreRepositoryTest - Starting MovieGenreRepositoryTest using Java 21.0.8 with PID 4516 (started by 10840583 in C:\Users\10840583\Downloads\team-kolding\movie-service)
+2025-10-15 15:25:26.675 INFO  [main] n.c.m.r.MovieGenreRepositoryTest - No active profile set, falling back to 1 default profile: "default"
+2025-10-15 15:25:26.959 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-15 15:25:27.063 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 83 ms. Found 5 JPA repository interfaces.
+2025-10-15 15:25:27.153 INFO  [main] o.s.b.t.a.j.TestDatabaseAutoConfiguration$EmbeddedDataSourceBeanFactoryPostProcessor - Replacing 'dataSource' DataSource bean with embedded version
+2025-10-15 15:25:27.251 INFO  [main] o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:e98cb42d-6298-4a5f-90f4-60bd3da1eb8c;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2025-10-15 15:25:28.004 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-15 15:25:28.160 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-15 15:25:28.247 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-15 15:25:28.486 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-15 15:25:28.655 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory$EmbeddedDataSourceProxy@338e5f55']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-15 15:25:30.401 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-15 15:25:30.499 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-15 15:25:30.968 INFO  [main] n.c.m.r.MovieGenreRepositoryTest - Started MovieGenreRepositoryTest in 4.317 seconds (process running for 13.257)
+2025-10-15 15:25:31.692 INFO  [main] n.c.m.service.impl.GenreServiceImpl - Genre updated id=1 name=Thriller
+2025-10-15 15:25:31.705 WARN  [main] n.c.m.service.impl.GenreServiceImpl - Attempt to create genre with blank name
+2025-10-15 15:25:31.711 INFO  [main] n.c.m.service.impl.GenreServiceImpl - Genre created id=1 name=Action
+2025-10-15 15:25:31.719 WARN  [main] n.c.m.service.impl.GenreServiceImpl - Duplicate genre creation attempted name=Action
+2025-10-15 15:25:31.725 WARN  [main] n.c.m.service.impl.GenreServiceImpl - Genre not found id=99
+2025-10-15 15:25:31.732 WARN  [main] n.c.m.service.impl.GenreServiceImpl - Genre not found id=99
+2025-10-15 15:25:31.732 INFO  [main] n.c.m.service.impl.GenreServiceImpl - Genre deleted id=1
+2025-10-15 15:25:31.779 WARN  [main] n.c.m.service.impl.GenreServiceImpl - Attempt to update genre id=1 with blank name
+2025-10-15 15:25:31.783 WARN  [main] n.c.m.service.impl.GenreServiceImpl - Duplicate genre name on update id=1 name=Comedy
+2025-10-15 15:25:31.794 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [nexi.cinetix.movie_service.MovieServiceApplicationTests]: MovieServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-10-15 15:25:31.808 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration nexi.cinetix.movie_service.MovieServiceApplication for test class nexi.cinetix.movie_service.MovieServiceApplicationTests
+2025-10-15 15:25:31.858 INFO  [main] n.c.m.MovieServiceApplicationTests - Starting MovieServiceApplicationTests using Java 21.0.8 with PID 4516 (started by 10840583 in C:\Users\10840583\Downloads\team-kolding\movie-service)
+2025-10-15 15:25:31.858 INFO  [main] n.c.m.MovieServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-10-15 15:25:32.391 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-15 15:25:32.420 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 5 JPA repository interfaces.
+2025-10-15 15:25:32.969 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-15 15:25:32.978 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-15 15:25:32.985 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-15 15:25:32.988 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-10-15 15:25:33.033 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn9: url=jdbc:h2:mem:moviedb user=SA
+2025-10-15 15:25:33.033 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-10-15 15:25:33.053 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-15 15:25:33.128 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-15 15:25:33.151 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-15 15:25:33.967 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-15 15:25:34.274 INFO  [main] n.c.m.MovieServiceApplicationTests - Started MovieServiceApplicationTests in 2.45 seconds (process running for 16.561)
+2025-10-15 15:25:34.827 INFO  [main] n.c.m.s.impl.LanguageServiceImpl - Language deleted id=1
+2025-10-15 15:25:34.831 WARN  [main] n.c.m.s.impl.LanguageServiceImpl - Attempt to create language with blank name
+2025-10-15 15:25:34.833 INFO  [main] n.c.m.s.impl.LanguageServiceImpl - Language updated id=1 name=Spanish
+2025-10-15 15:25:34.835 INFO  [main] n.c.m.s.impl.LanguageServiceImpl - Language created id=1 name=English
+2025-10-15 15:25:34.841 WARN  [main] n.c.m.s.impl.LanguageServiceImpl - Language not found id=99
+2025-10-15 15:25:34.845 WARN  [main] n.c.m.s.impl.LanguageServiceImpl - Language not found id=99
+2025-10-15 15:25:34.846 WARN  [main] n.c.m.s.impl.LanguageServiceImpl - Attempt to update language id=1 with blank name
+2025-10-15 15:25:34.854 WARN  [main] n.c.m.s.impl.LanguageServiceImpl - Duplicate language creation attempted name=English
+2025-10-15 15:25:34.858 WARN  [main] n.c.m.s.impl.LanguageServiceImpl - Duplicate language name on update id=1 name=Hindi
+2025-10-15 15:25:35.163 INFO  [main] n.c.m.service.impl.MovieServiceImpl - Movie updated id=1 title=Updated Multi-genre Movie
+2025-10-15 15:25:35.178 INFO  [main] n.c.m.service.impl.MovieServiceImpl - Movie updated id=1 title=Updated Movie
+2025-10-15 15:25:35.181 INFO  [main] n.c.m.service.impl.MovieServiceImpl - Movie created id=105 title=
+2025-10-15 15:25:35.194 INFO  [main] n.c.m.service.impl.MovieServiceImpl - Movie updated id=1 title=Updated Movie with Poster
+2025-10-15 15:25:35.201 INFO  [main] n.c.m.service.impl.MovieServiceImpl - Poster updated for movie id=1 size=16 bytes
+2025-10-15 15:25:35.208 INFO  [main] n.c.m.service.impl.MovieServiceImpl - Movie deleted id=1
+2025-10-15 15:25:35.213 WARN  [main] n.c.m.service.impl.MovieServiceImpl - Invalid Base64 poster data supplied on create
+2025-10-15 15:25:35.213 INFO  [main] n.c.m.service.impl.MovieServiceImpl - Movie created id=102 title=Movie with Invalid Poster
+2025-10-15 15:25:35.219 INFO  [main] n.c.m.service.impl.MovieServiceImpl - Languages added to movie id=1 currentLanguages=0
+2025-10-15 15:25:35.221 INFO  [main] n.c.m.service.impl.MovieServiceImpl - Languages added to movie id=1 currentLanguages=1
+2025-10-15 15:25:35.229 INFO  [main] n.c.m.service.impl.MovieServiceImpl - Genres added to movie id=1 currentGenres=0
+2025-10-15 15:25:35.235 INFO  [main] n.c.m.service.impl.MovieServiceImpl - Genres added to movie id=1 currentGenres=0
+2025-10-15 15:25:35.269 INFO  [main] n.c.m.service.impl.MovieServiceImpl - Movie created id=101 title=Movie with Poster
+2025-10-15 15:25:35.276 WARN  [main] n.c.m.service.impl.MovieServiceImpl - Movie not found id=999
+2025-10-15 15:25:35.290 WARN  [main] n.c.m.service.impl.MovieServiceImpl - Genre id=999 not associated with movie id=1 during removal
+2025-10-15 15:25:35.290 INFO  [main] n.c.m.service.impl.MovieServiceImpl - Genre removal processed movie id=1 remainingGenres=0
+2025-10-15 15:25:35.297 WARN  [main] n.c.m.service.impl.MovieServiceImpl - Movie not found id=999
+2025-10-15 15:25:35.300 INFO  [main] n.c.m.service.impl.MovieServiceImpl - Language removal processed movie id=1 remainingLanguages=0
+2025-10-15 15:25:35.309 WARN  [main] n.c.m.service.impl.MovieServiceImpl - Movie not found id=999
+2025-10-15 15:25:35.326 INFO  [main] n.c.m.service.impl.MovieServiceImpl - Movie created id=104 title=Movie without languages
+2025-10-15 15:25:35.339 WARN  [main] n.c.m.service.impl.MovieServiceImpl - Language not found when attaching to movie id=1 languageId=999
+2025-10-15 15:25:35.345 INFO  [main] n.c.m.service.impl.MovieServiceImpl - Movie created id=106 title=Movie with zero duration
+2025-10-15 15:25:35.363 WARN  [main] n.c.m.service.impl.MovieServiceImpl - Movie not found id=999
+2025-10-15 15:25:35.372 WARN  [main] n.c.m.service.impl.MovieServiceImpl - Movie not found id=999
+2025-10-15 15:25:35.374 WARN  [main] n.c.m.service.impl.MovieServiceImpl - Movie not found id=999
+2025-10-15 15:25:35.378 INFO  [main] n.c.m.service.impl.MovieServiceImpl - Movie updated id=1 title=Updated Movie
+2025-10-15 15:25:35.394 WARN  [main] n.c.m.service.impl.MovieServiceImpl - Genre not found when attaching to movie id=1 genreId=999
+2025-10-15 15:25:35.397 WARN  [main] n.c.m.service.impl.MovieServiceImpl - Movie not found id=999
+2025-10-15 15:25:35.402 WARN  [main] n.c.m.service.impl.MovieServiceImpl - Movie not found id=999
+2025-10-15 15:25:35.421 WARN  [main] n.c.m.service.impl.MovieServiceImpl - Language id=999 not associated with movie id=1 during removal
+2025-10-15 15:25:35.421 INFO  [main] n.c.m.service.impl.MovieServiceImpl - Language removal processed movie id=1 remainingLanguages=0
+2025-10-15 15:25:35.428 INFO  [main] n.c.m.service.impl.MovieServiceImpl - Genres added to movie id=1 currentGenres=1
+2025-10-15 15:25:35.437 INFO  [main] n.c.m.service.impl.MovieServiceImpl - Genres added to movie id=1 currentGenres=1
+2025-10-15 15:25:35.441 INFO  [main] n.c.m.service.impl.MovieServiceImpl - Languages added to movie id=1 currentLanguages=1
+2025-10-15 15:25:35.445 INFO  [main] n.c.m.service.impl.MovieServiceImpl - Poster updated for movie id=1 size=16 bytes
+2025-10-15 15:25:35.451 INFO  [main] n.c.m.service.impl.MovieServiceImpl - Movie updated id=1 title=Updated Movie
+2025-10-15 15:25:35.454 WARN  [main] n.c.m.service.impl.MovieServiceImpl - Genre not found when attaching to movie id=1 genreId=999
+2025-10-15 15:25:35.460 INFO  [main] n.c.m.service.impl.MovieServiceImpl - Movie created id=100 title=New Movie
+2025-10-15 15:25:35.468 WARN  [main] n.c.m.service.impl.MovieServiceImpl - Language not found when attaching to movie id=null languageId=999
+2025-10-15 15:25:35.474 INFO  [main] n.c.m.service.impl.MovieServiceImpl - Movie created id=107 title=Movie with poster but no content type
+2025-10-15 15:25:35.478 INFO  [main] n.c.m.service.impl.MovieServiceImpl - Poster updated for movie id=1 size=0 bytes
+2025-10-15 15:25:35.482 INFO  [main] n.c.m.service.impl.MovieServiceImpl - Languages added to movie id=1 currentLanguages=0
+2025-10-15 15:25:35.491 INFO  [main] n.c.m.service.impl.MovieServiceImpl - Genre removal processed movie id=1 remainingGenres=0
+2025-10-15 15:25:35.496 WARN  [main] n.c.m.service.impl.MovieServiceImpl - Movie not found id=999
+2025-10-15 15:25:35.499 WARN  [main] n.c.m.service.impl.MovieServiceImpl - Genre not found when attaching to movie id=null genreId=999
+2025-10-15 15:25:35.502 INFO  [main] n.c.m.service.impl.MovieServiceImpl - Movie created id=103 title=Movie without genres
+2025-10-15 15:25:35.514 INFO  [main] n.c.m.service.impl.MovieServiceImpl - Movie created id=108 title=Multi-genre Movie
+2025-10-15 15:25:35.517 WARN  [main] n.c.m.service.impl.MovieServiceImpl - Language not found when attaching to movie id=1 languageId=999
+2025-10-15 15:25:35.522 WARN  [main] n.c.m.service.impl.MovieServiceImpl - Movie not found id=999
+2025-10-15 15:25:35.534 WARN  [main] n.c.m.service.impl.MovieServiceImpl - Invalid Base64 poster data supplied on update for movie id=1
+2025-10-15 15:25:35.534 INFO  [main] n.c.m.service.impl.MovieServiceImpl - Movie updated id=1 title=Updated Movie with Invalid Poster
+2025-10-15 15:25:35.546 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [nexi.cinetix.movie_service.controller.GenreControllerTest]: GenreControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-10-15 15:25:35.556 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration nexi.cinetix.movie_service.MovieServiceApplication for test class nexi.cinetix.movie_service.controller.GenreControllerTest
+2025-10-15 15:25:35.579 INFO  [main] n.c.m.controller.GenreControllerTest - Starting GenreControllerTest using Java 21.0.8 with PID 4516 (started by 10840583 in C:\Users\10840583\Downloads\team-kolding\movie-service)
+2025-10-15 15:25:35.579 INFO  [main] n.c.m.controller.GenreControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-10-15 15:25:35.863 INFO  [main] o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-10-15 15:25:35.863 INFO  [main] o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-10-15 15:25:35.866 INFO  [main] o.s.t.w.s.TestDispatcherServlet - Completed initialization in 3 ms
+2025-10-15 15:25:35.870 INFO  [main] n.c.m.controller.GenreControllerTest - Started GenreControllerTest in 0.311 seconds (process running for 18.16)
+2025-10-15 15:25:35.943 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [nexi.cinetix.movie_service.repository.MovieLanguageRepositoryTest]: MovieLanguageRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-10-15 15:25:35.951 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration nexi.cinetix.movie_service.MovieServiceApplication for test class nexi.cinetix.movie_service.repository.MovieLanguageRepositoryTest
+2025-10-15 15:25:36.096 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [nexi.cinetix.movie_service.repository.MovieRepositoryTest]: MovieRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-10-15 15:25:36.105 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration nexi.cinetix.movie_service.MovieServiceApplication for test class nexi.cinetix.movie_service.repository.MovieRepositoryTest
+2025-10-15 15:25:36.398 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [nexi.cinetix.movie_service.repository.LanguageRepositoryTest]: LanguageRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-10-15 15:25:36.404 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration nexi.cinetix.movie_service.MovieServiceApplication for test class nexi.cinetix.movie_service.repository.LanguageRepositoryTest
+2025-10-15 15:25:36.503 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [nexi.cinetix.movie_service.repository.GenreRepositoryTest]: GenreRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-10-15 15:25:36.515 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration nexi.cinetix.movie_service.MovieServiceApplication for test class nexi.cinetix.movie_service.repository.GenreRepositoryTest
+2025-10-15 15:25:36.619 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [nexi.cinetix.movie_service.config.CorsConfigurationTest]: CorsConfigurationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-10-15 15:25:36.633 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration nexi.cinetix.movie_service.MovieServiceApplication for test class nexi.cinetix.movie_service.config.CorsConfigurationTest
+2025-10-15 15:25:36.659 INFO  [main] n.c.m.config.CorsConfigurationTest - Starting CorsConfigurationTest using Java 21.0.8 with PID 4516 (started by 10840583 in C:\Users\10840583\Downloads\team-kolding\movie-service)
+2025-10-15 15:25:36.659 INFO  [main] n.c.m.config.CorsConfigurationTest - No active profile set, falling back to 1 default profile: "default"
+2025-10-15 15:25:36.865 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-15 15:25:36.898 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 31 ms. Found 5 JPA repository interfaces.
+2025-10-15 15:25:37.004 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-15 15:25:37.006 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-15 15:25:37.014 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-15 15:25:37.014 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2025-10-15 15:25:37.014 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection conn46: url=jdbc:h2:mem:testdb user=SA
+2025-10-15 15:25:37.014 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2025-10-15 15:25:37.014 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-15 15:25:37.099 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-15 15:25:37.118 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-15 15:25:37.232 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-15 15:25:37.364 INFO  [main] n.c.m.config.CorsConfigurationTest - Started CorsConfigurationTest in 0.723 seconds (process running for 19.652)
+2025-10-15 15:25:37.373 INFO  [main] o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-10-15 15:25:37.373 INFO  [main] o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-10-15 15:25:37.373 INFO  [main] o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2025-10-15 15:25:37.406 INFO  [main] o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-10-15 15:25:37.406 INFO  [main] o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-10-15 15:25:37.406 INFO  [main] o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2025-10-15 15:25:37.415 INFO  [main] o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-10-15 15:25:37.417 INFO  [main] o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-10-15 15:25:37.418 INFO  [main] o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-10-15 15:25:37.435 INFO  [main] o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-10-15 15:25:37.435 INFO  [main] o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-10-15 15:25:37.438 INFO  [main] o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+2025-10-15 15:25:37.445 INFO  [main] o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-10-15 15:25:37.445 INFO  [main] o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-10-15 15:25:37.445 INFO  [main] o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2025-10-15 15:25:37.456 INFO  [main] o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-10-15 15:25:37.456 INFO  [main] o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-10-15 15:25:37.456 INFO  [main] o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2025-10-15 15:25:37.462 INFO  [main] o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-10-15 15:25:37.462 INFO  [main] o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-10-15 15:25:37.462 INFO  [main] o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2025-10-15 15:25:37.474 INFO  [main] o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-10-15 15:25:37.474 INFO  [main] o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-10-15 15:25:37.474 INFO  [main] o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2025-10-15 15:25:37.485 INFO  [main] o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-10-15 15:25:37.485 INFO  [main] o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-10-15 15:25:37.485 INFO  [main] o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2025-10-15 15:25:37.500 INFO  [main] o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-10-15 15:25:37.500 INFO  [main] o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-10-15 15:25:37.500 INFO  [main] o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2025-10-15 15:25:37.507 INFO  [main] o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-10-15 15:25:37.507 INFO  [main] o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-10-15 15:25:37.507 INFO  [main] o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2025-10-15 15:25:37.536 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-15 15:25:37.559 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-15 15:25:37.559 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-10-15 15:25:37.566 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-10-15 15:25:37.570 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-15 15:25:37.575 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2025-10-15 15:25:37.581 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.

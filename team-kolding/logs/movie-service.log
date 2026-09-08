@@ -1,0 +1,7 @@
+2025-10-24 13:09:37.698 WARN  [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=18h47m44s67ms949µs500ns).
+2025-10-24 14:46:06.165 WARN  [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h20m3s479ms31µs600ns).
+2025-10-24 19:21:31.999 WARN  [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h25m30s39ms16µs).
+2025-10-24 20:01:53.378 WARN  [AMQP Connection 127.0.0.1:5672] c.r.c.impl.ForgivingExceptionHandler - An unexpected connection driver error occurred (Exception message: Connection reset)
+2025-10-24 20:04:12.212 WARN  [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=40m15s616ms195µs).
+2025-10-24 23:20:06.855 WARN  [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h13m29s853ms718µs500ns).
+2025-10-24 23:27:54.242 WARN  [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=52s364ms138µs500ns).

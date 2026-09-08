@@ -1,0 +1,45 @@
+<div class="add-movie-page">
+  <h1>Add Movie</h1>
+  <form (ngSubmit)="submit()" novalidate>
+    <div class="field-group">
+      <label for="title">Title</label>
+      <input id="title" type="text" [(ngModel)]="form().title" name="title" (ngModelChange)="update('title', $event)" required />
+    </div>
+    <div class="field-row">
+      <div class="field-group">
+        <label for="duration">Duration (min)</label>
+        <input id="duration" type="number" min="1" [(ngModel)]="form().duration" name="duration" (ngModelChange)="update('duration', $event ? +$event : null)" required />
+      </div>
+      <div class="field-group">
+        <label for="releaseDate">Release Date</label>
+        <input id="releaseDate" type="date" [(ngModel)]="form().releaseDate" name="releaseDate" (ngModelChange)="update('releaseDate', $event)" required />
+      </div>
+    </div>
+    <div class="field-group">
+      <label for="description">Description</label>
+      <textarea id="description" rows="4" [(ngModel)]="form().description" name="description" (ngModelChange)="update('description', $event)" required></textarea>
+    </div>
+    <div class="field-row">
+      <div class="field-group">
+        <label for="genre">Genre</label>
+        <select id="genre" [(ngModel)]="form().genreId" name="genreId" (ngModelChange)="update('genreId', $event ? +$event : null)" required>
+          <option value="" disabled selected>Select genre</option>
+          <option *ngFor="let g of genres()" [value]="g.genre_id">{{ g.name }}</option>
+        </select>
+      </div>
+      <div class="field-group">
+        <label for="language">Language</label>
+        <select id="language" [(ngModel)]="form().languageId" name="languageId" (ngModelChange)="update('languageId', $event ? +$event : null)" required>
+          <option value="" disabled selected>Select language</option>
+          <option *ngFor="let l of languages()" [value]="l.language_id">{{ l.name }}</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button type="submit" [disabled]="!canSubmit()">Create & Continue</button>
+    </div>
+    <p class="error" *ngIf="form().error">{{ form().error }}</p>
+  </form>
+  <p class="note small">After creating the movie you will be redirected to upload a poster (JPG/PNG).</p>
+</div>

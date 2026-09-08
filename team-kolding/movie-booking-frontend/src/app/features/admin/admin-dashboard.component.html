@@ -1,0 +1,13 @@
+<section class="admin-dashboard">
+  <h1>Admin Dashboard</h1>
+  <p class="intro">Welcome, {{ auth.profile()?.username }}. Use the panels below to manage the platform.</p>
+  <div class="panels">
+    @for (s of sections(); track s.title) {
+      <div class="panel">
+        <h2>{{ s.icon }} {{ s.title }}</h2>
+        <p>{{ s.description }}</p>
+        <a class="btn" [routerLink]="s.link">Go to {{ s.title }}</a>
+      </div>
+    }
+  </div>
+</section>

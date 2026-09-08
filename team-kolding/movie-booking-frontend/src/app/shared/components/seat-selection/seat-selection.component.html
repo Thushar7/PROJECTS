@@ -1,0 +1,72 @@
+<div class="seat-selection" role="region" aria-label="Seat selection">
+  <header class="seat-header">
+    <h3 class="title">Pick Your Seats</h3>
+    <div class="sub">Max {{ maxSelectable }} seats • Each {{ pricePerSeat | currency:'USD':'symbol':'1.0-0' }}</div>
+  </header>
+
+  @if (loading()) { <div class="status" aria-live="polite">Loading seats…</div> }
+  @if (conflictMessage()) { <div class="error" role="alert">{{ conflictMessage() }}</div> }
+
+  <div class="screen-wrap" aria-hidden="true">
+    <div class="screen-label">SCREEN</div>
+    <div class="screen"></div>
+  </div>
+
+  <div class="legend" aria-label="Legend">
+    <span class="legend-item" aria-label="Available seat"><span class="icon available" aria-hidden="true"></span>Available</span>
+    <span class="legend-item" aria-label="Selected seat"><span class="icon selected" aria-hidden="true"></span>Selected</span>
+    <span class="legend-item" aria-label="Reserved seat"><span class="icon reserved" aria-hidden="true"></span>Reserved</span>
+  </div>
+
+  @if (rows().length) {
+    <div class="grid" role="grid" aria-label="Seat map">
+      @for (r of rows(); track r.row) {
+        <div class="row" role="row" aria-label="Row {{ r.row }}">
+          <div class="row-label" aria-hidden="true">{{ r.row }}</div>
+          <div class="seats" role="presentation">
+            @for (seat of r.seats; track seat.id) {
+              <button
+                type="button"
+                class="seat"
+                [ngClass]="seatClasses(seat)"
+                (click)="toggle(seat)"
+                [disabled]="seat.reserved || loading()"
+                role="gridcell"
+                [attr.aria-selected]="seat.selected"
+                [attr.aria-label]="'Seat ' + seat.id + (seat.reserved ? ' reserved' : seat.selected ? ' selected' : ' available')"
+              >
+                <span class="seat-inner">{{ seat.number }}</span>
+              </button>
+              @if (seat.number === 6) { <div class="aisle" aria-hidden="true"></div> }
+            }
+          </div>
+        </div>
+      }
+    </div>
+  }
+
+  <div class="summary" aria-live="polite">
+    <div class="count" [class.bump]="totalSelected()">{{ totalSelected() }} selected</div>
+    <div class="total">{{ totalAmount() | currency:'USD':'symbol':'1.0-0' }}</div>
+  </div>
+
+  <div class="actions">
+    <button type="button" (click)="cancel()" [disabled]="loading()">Cancel</button>
+    <button type="button" class="primary" (click)="openPayment()" [disabled]="!totalSelected() || loading()">Continue</button>
+  </div>
+
+  @if (showPayment()) {
+    <app-payment-modal
+      [amount]="totalAmount()"
+      (cancel)="cancelPayment()"
+      (confirmed)="onPaymentConfirmed($event)"
+    />
+  }
+  @if (showPaymentSuccess()) {
+    <app-payment-success
+      [amount]="totalAmount()"
+      [method]="chosenPaymentMethod()"
+      (done)="successDone()"
+    />
+  }
+</div>

@@ -1,0 +1,5 @@
+2025-10-15 15:24:55.448 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-10-15 15:24:55.484 INFO  [main] c.c.g.GatewayServiceApplicationTests - Starting GatewayServiceApplicationTests using Java 21.0.8 with PID 11244 (started by 10840583 in C:\Users\10840583\Downloads\team-kolding\gateway-service)
+2025-10-15 15:24:55.484 INFO  [main] c.c.g.GatewayServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-10-15 15:24:56.418 INFO  [main] o.s.cloud.context.scope.GenericScope - BeanFactory id=a555224d-4f21-3a48-9915-59303d605fd9
+2025-10-15 15:24:57.902 INFO  [main] c.c.g.GatewayServiceApplicationTests - Started GatewayServiceApplicationTests in 2.85 seconds (process running for 4.162)

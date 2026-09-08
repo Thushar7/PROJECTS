@@ -1,0 +1,14 @@
+@if (visible()) {
+  <div class="ps-backdrop" role="presentation"></div>
+  <div class="ps-card" role="alertdialog" aria-live="assertive" aria-label="Payment successful">
+    <div class="icon-wrap" aria-hidden="true">
+      <svg class="circle" viewBox="0 0 120 120">
+        <circle class="ring" cx="60" cy="60" r="54" />
+        <path class="check" d="M35 63 L52 78 L86 42" />
+      </svg>
+    </div>
+    <h3 class="title">Payment Successful</h3>
+    <p class="meta">{{ amount | currency:currencyCode:'symbol':'1.0-0' }} paid via {{ method || 'selected method' }}.</p>
+    <button type="button" (click)="close()" class="ok-btn">View Ticket</button>
+  </div>
+}

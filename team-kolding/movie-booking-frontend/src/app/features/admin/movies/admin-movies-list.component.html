@@ -1,0 +1,87 @@
+<section class="admin-movies">
+  <div class="header-row">
+    <h1>Movies</h1>
+    <a class="add-btn" routerLink="/admin/movies/add">+ Add Movie</a>
+  </div>
+  @if (error()) { <div class="error">{{ error() }}</div> }
+  <table class="data" *ngIf="movies().length; else empty">
+    <thead><tr><th>Title</th><th>Year</th><th>Duration</th><th>Actions</th></tr></thead>
+    <tbody>
+      @for (m of movies(); track m.id) {
+        <tr>
+          <td>{{ m.title }}</td>
+          <td>{{ m.year }}</td>
+          <td>{{ m.durationMinutes }}m</td>
+          <td class="actions-cell">
+            <a [routerLink]="['/showtimes', m.id]" class="showtimes-btn" title="View showtimes for {{ m.title }}">
+              <span class="icon" aria-hidden="true">🕒</span>
+              <span>Showtimes</span>
+            </a>
+            <button type="button" class="edit-btn" (click)="openEdit(m.id)" title="Edit">✏️ Edit</button>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+  <ng-template #empty><p class="empty">No movies found.</p></ng-template>
+</section>
+
+@if (editing()) {
+  <div class="modal-backdrop" (click)="closeEdit()"></div>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="editMovieTitle">
+    <div class="modal-header">
+      <h2 id="editMovieTitle">Edit Movie</h2>
+      <button type="button" class="close-btn" (click)="closeEdit()" aria-label="Close">×</button>
+    </div>
+    <div class="modal-body" *ngIf="!editLoading(); else loadingTpl">
+      <form (ngSubmit)="submitEdit()" novalidate>
+        <div class="field-row">
+          <div class="field-group">
+            <label>Movie ID</label>
+            <input type="text" [value]="editMovieId()" disabled />
+          </div>
+          <div class="field-group">
+            <label>Title</label>
+            <input type="text" [ngModel]="editTitle()" name="title" (ngModelChange)="editTitle.set($event)" required />
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field-group">
+            <label>Duration (min)</label>
+            <input type="number" min="1" [ngModel]="editDuration()" name="duration" (ngModelChange)="editDuration.set(+$event)" required />
+          </div>
+          <div class="field-group">
+            <label>Release Date</label>
+            <input type="date" [ngModel]="editReleaseDate()" name="releaseDate" (ngModelChange)="editReleaseDate.set($event)" required />
+          </div>
+        </div>
+        <div class="field-group">
+          <label>Description</label>
+          <textarea rows="3" [ngModel]="editDescription()" name="description" (ngModelChange)="editDescription.set($event)"></textarea>
+        </div>
+        <div class="field-row">
+          <div class="field-group">
+            <label>Genre</label>
+            <select [ngModel]="editGenreId()" name="genreId" (ngModelChange)="editGenreId.set(+($event))" required>
+              <option value="" disabled>Select</option>
+              @for (g of allGenres(); track g.genre_id) { <option [value]="g.genre_id">{{ g.name }}</option> }
+            </select>
+          </div>
+          <div class="field-group">
+            <label>Language</label>
+            <select [ngModel]="editLanguageId()" name="languageId" (ngModelChange)="editLanguageId.set(+($event))" required>
+              <option value="" disabled>Select</option>
+              @for (l of allLanguages(); track l.language_id) { <option [value]="l.language_id">{{ l.name }}</option> }
+            </select>
+          </div>
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="secondary" (click)="closeEdit()" [disabled]="editSubmitting()">Cancel</button>
+          <button type="submit" [disabled]="!canSubmitEdit()">Save Changes</button>
+        </div>
+        <p class="error" *ngIf="editError()">{{ editError() }}</p>
+      </form>
+    </div>
+    <ng-template #loadingTpl><p class="loading">Loading movie...</p></ng-template>
+  </div>
+}

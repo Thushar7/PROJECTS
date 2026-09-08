@@ -1,0 +1,39 @@
+/src/app/
+│
+├── core/                      # Core services and utilities
+│   ├── interceptors/          # JWT interceptor
+│   ├── guards/                # Auth & role-based route guards
+│   ├── services/              # Shared services (auth, API, etc.)
+│   └── models/                # Shared interfaces and types
+│
+├── shared/                    # Reusable components
+│   ├── components/            # Navbar, footer, modals, etc.
+│   └── pipes/                 # Custom pipes
+│
+├── static/                    # Static pages
+│   ├── home/                  # Home page component
+│   ├── about/                 # About page
+│   └── contact/               # Contact page
+│
+├── auth/                      # Authentication module
+│   ├── login/
+│   └── register/
+│
+├── user/                      # User-specific features
+│   ├── movies/                # Search and view movies
+│   ├── showtimes/            # View showtimes
+│   ├── seats/                # Seat selection
+│   ├── booking/              # Booking and payment
+│   ├── profile/              # User profile and booking history
+│   └── notifications/        # View notifications
+│
+├── admin/                     # Admin panel
+│   ├── dashboard/             # Overview and stats
+│   ├── users/                 # Manage users
+│   ├── movies/                # Add/edit/delete movies
+│   ├── showtimes/            # Manage showtimes
+│   └── reports/              # Booking and revenue reports
+│
+├── app-routing.module.ts      # Central routing configuration
+├── app.component.ts           # Root component
+└── app.module.ts              # Root module

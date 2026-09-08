@@ -1,0 +1,45 @@
+<section class="admin-users">
+  <h1>Users</h1>
+  <!-- <form class="filters" (submit)="$event.preventDefault()">
+    <input type="search" placeholder="Search username/email" (change)="applySearch($event.target.value)">
+  <select (change)="setRole($any($event.target).value || null)">
+      <option value="">All Roles</option>
+      <option value="ADMIN">Admin</option>
+      <option value="USER">User</option>
+    </select>
+  </form> -->
+  <!-- <div class="actions">
+    <button type="button" (click)="bulkDisable()" [disabled]="!selection().size">Disable Selected</button>
+  </div> -->
+  @if (error()) { <div class="error">{{ error() }}</div> }
+  <table class="data" *ngIf="users().length; else empty">
+    <thead>
+      <tr>
+        <th><input type="checkbox" [checked]="allSelected()" [indeterminate]="someSelected()" (change)="toggleAll($event)"></th>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Role</th>
+        <th>Created</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (u of users(); track u.id) {
+        <tr (click)="goDetail(u)">
+          <td><input type="checkbox" (click)="$event.stopPropagation()" (change)="toggleOne(u.id, $event)" [checked]="selection().has(u.id)"></td>
+          <td>{{ u.username }}</td>
+          <td>{{ u.email }}</td>
+          <td>{{ u.role }}</td>
+          <td>{{ u.createdAt | date:'short' }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+  <ng-template #empty>
+    <p class="empty">No users found.</p>
+  </ng-template>
+  <div class="pager">
+    <button (click)="changePage(-1)" [disabled]="page() === 0">Prev</button>
+    <span>Page {{ page() + 1 }} / {{ totalPages() }}</span>
+    <button (click)="changePage(1)" [disabled]="page() + 1 >= totalPages()">Next</button>
+  </div>
+</section>

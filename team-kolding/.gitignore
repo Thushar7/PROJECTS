@@ -1,0 +1,8 @@
+# Root-level ignores
+# Ignore JetBrains IDE project settings everywhere
+.idea/
+**/.idea/
+*.iml
+# (Optional) common noise you may already handle per-module
+.DS_Store
+

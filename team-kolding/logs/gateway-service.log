@@ -1,0 +1,324 @@
+2025-10-24 13:11:57.601 WARN  [http-nio-8080-exec-1] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:11:57.576 INFO  [http-nio-8080-exec-108] o.a.tomcat.util.http.parser.Cookie - A cookie header was received [${jndi:dns://MDEDiscovery2d7ebdf2dfCookie-8080}] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2025-10-24 13:11:57.602 WARN  [http-nio-8080-exec-102] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:11:57.601 WARN  [http-nio-8080-exec-13] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:11:57.610 WARN  [http-nio-8080-exec-103] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:11:57.624 WARN  [http-nio-8080-exec-108] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:11:58.275 WARN  [http-nio-8080-exec-8] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:11:58.284 WARN  [http-nio-8080-exec-4] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:11:58.720 INFO  [http-nio-8080-exec-10] o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target [/js/?${jndi:dns://MDEDiscovery2d7ebdf2dfSeenInTheWildGet-8080} ]. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:484) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:270) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+2025-10-24 13:12:00.032 WARN  [http-nio-8080-exec-14] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.035 WARN  [http-nio-8080-exec-108] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.035 WARN  [http-nio-8080-exec-13] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.061 WARN  [http-nio-8080-exec-1] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.061 WARN  [http-nio-8080-exec-102] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.086 WARN  [http-nio-8080-exec-4] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.086 WARN  [http-nio-8080-exec-8] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.092 WARN  [http-nio-8080-exec-10] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.104 WARN  [http-nio-8080-exec-14] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.104 WARN  [http-nio-8080-exec-108] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.119 WARN  [http-nio-8080-exec-13] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.120 WARN  [http-nio-8080-exec-1] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.122 WARN  [http-nio-8080-exec-103] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.151 WARN  [http-nio-8080-exec-8] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.161 WARN  [http-nio-8080-exec-2] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.161 WARN  [http-nio-8080-exec-10] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.163 WARN  [http-nio-8080-exec-14] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.168 WARN  [http-nio-8080-exec-13] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.187 WARN  [http-nio-8080-exec-102] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.187 WARN  [http-nio-8080-exec-103] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.200 WARN  [http-nio-8080-exec-8] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.219 WARN  [http-nio-8080-exec-108] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.220 WARN  [http-nio-8080-exec-10] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.222 WARN  [http-nio-8080-exec-14] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.222 WARN  [http-nio-8080-exec-13] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.251 WARN  [http-nio-8080-exec-8] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.251 WARN  [http-nio-8080-exec-4] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.251 WARN  [http-nio-8080-exec-2] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.269 WARN  [http-nio-8080-exec-1] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.324 WARN  [http-nio-8080-exec-13] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.324 WARN  [http-nio-8080-exec-103] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.337 WARN  [http-nio-8080-exec-102] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.349 WARN  [http-nio-8080-exec-14] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.368 WARN  [http-nio-8080-exec-8] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.376 INFO  [http-nio-8080-exec-2] o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target [/struts2-showcase/${jndi:dns://MDEDiscovery2d7ebdf2dfApacheStruts2-8080} ]. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:492) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:270) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+2025-10-24 13:12:00.416 WARN  [http-nio-8080-exec-1] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.424 WARN  [http-nio-8080-exec-10] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.425 WARN  [http-nio-8080-exec-13] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.439 WARN  [http-nio-8080-exec-103] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.457 WARN  [http-nio-8080-exec-14] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.457 INFO  [http-nio-8080-exec-102] o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target [/analytics/telemetry/ph/api/hyper/send?_c=${jndi:dns://MDEDiscovery2d7ebdf2dfVMwarevCenter-8080}&i=test ]. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:484) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:270) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+2025-10-24 13:12:00.461 WARN  [http-nio-8080-exec-4] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.470 WARN  [http-nio-8080-exec-108] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.476 WARN  [http-nio-8080-exec-2] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.494 WARN  [http-nio-8080-exec-10] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.495 WARN  [http-nio-8080-exec-1] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.501 WARN  [http-nio-8080-exec-13] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.512 WARN  [http-nio-8080-exec-102] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.529 WARN  [http-nio-8080-exec-4] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.527 WARN  [http-nio-8080-exec-8] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.550 WARN  [http-nio-8080-exec-2] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.552 WARN  [http-nio-8080-exec-10] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.560 WARN  [http-nio-8080-exec-1] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.561 WARN  [http-nio-8080-exec-13] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.570 WARN  [http-nio-8080-exec-14] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.579 WARN  [http-nio-8080-exec-4] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.584 WARN  [http-nio-8080-exec-8] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.592 WARN  [http-nio-8080-exec-108] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.602 WARN  [http-nio-8080-exec-2] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.606 WARN  [http-nio-8080-exec-10] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.621 WARN  [http-nio-8080-exec-1] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.621 WARN  [http-nio-8080-exec-103] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.652 WARN  [http-nio-8080-exec-14] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.660 WARN  [http-nio-8080-exec-4] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.665 WARN  [http-nio-8080-exec-8] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.671 WARN  [http-nio-8080-exec-108] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.680 WARN  [http-nio-8080-exec-13] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.684 WARN  [http-nio-8080-exec-10] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.690 WARN  [http-nio-8080-exec-103] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.695 WARN  [http-nio-8080-exec-1] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.698 WARN  [http-nio-8080-exec-14] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.700 WARN  [http-nio-8080-exec-4] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.707 WARN  [http-nio-8080-exec-8] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.715 WARN  [http-nio-8080-exec-108] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.719 WARN  [http-nio-8080-exec-2] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.726 WARN  [http-nio-8080-exec-13] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.729 WARN  [http-nio-8080-exec-10] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.729 WARN  [http-nio-8080-exec-103] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.749 WARN  [http-nio-8080-exec-102] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.756 WARN  [http-nio-8080-exec-4] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.756 WARN  [http-nio-8080-exec-14] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.759 WARN  [http-nio-8080-exec-8] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.762 WARN  [http-nio-8080-exec-108] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.780 WARN  [http-nio-8080-exec-2] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.795 WARN  [http-nio-8080-exec-13] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.802 WARN  [http-nio-8080-exec-103] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.808 WARN  [http-nio-8080-exec-10] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.811 WARN  [http-nio-8080-exec-1] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.827 INFO  [http-nio-8080-exec-102] o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target [/api/v2/${jndi:dns://MDEDiscovery2d7ebdf2dfSeenInTheWildGet-8080} ]. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:492) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:270) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+2025-10-24 13:12:00.849 WARN  [http-nio-8080-exec-109] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.881 WARN  [http-nio-8080-exec-110] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.912 INFO  [http-nio-8080-exec-112] o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target [/api/?${jndi:dns://MDEDiscovery2d7ebdf2dfSeenInTheWildGet-8080} ]. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:484) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:270) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+2025-10-24 13:12:00.926 WARN  [http-nio-8080-exec-113] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.936 WARN  [http-nio-8080-exec-114] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.942 INFO  [http-nio-8080-exec-117] o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target [/index.html?${jndi:dns://MDEDiscovery2d7ebdf2dfSeenInTheWildGet-8080} ]. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:484) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:270) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+2025-10-24 13:12:00.947 WARN  [http-nio-8080-exec-111] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.957 WARN  [http-nio-8080-exec-116] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.972 WARN  [http-nio-8080-exec-118] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.972 WARN  [http-nio-8080-exec-115] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.988 WARN  [http-nio-8080-exec-119] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:00.989 WARN  [http-nio-8080-exec-120] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.038 WARN  [http-nio-8080-exec-121] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.061 WARN  [http-nio-8080-exec-122] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.097 WARN  [http-nio-8080-exec-124] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.097 WARN  [http-nio-8080-exec-123] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.108 WARN  [http-nio-8080-exec-125] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.112 WARN  [http-nio-8080-exec-126] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.112 WARN  [http-nio-8080-exec-128] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.117 WARN  [http-nio-8080-exec-127] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.126 WARN  [http-nio-8080-exec-129] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.156 WARN  [http-nio-8080-exec-131] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.129 WARN  [http-nio-8080-exec-130] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.156 WARN  [http-nio-8080-exec-133] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.183 WARN  [http-nio-8080-exec-135] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.175 WARN  [http-nio-8080-exec-134] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.157 WARN  [http-nio-8080-exec-132] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.188 WARN  [http-nio-8080-exec-136] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.189 WARN  [http-nio-8080-exec-137] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.202 WARN  [http-nio-8080-exec-138] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.221 WARN  [http-nio-8080-exec-139] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.222 WARN  [http-nio-8080-exec-140] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.240 WARN  [http-nio-8080-exec-141] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.240 WARN  [http-nio-8080-exec-143] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.240 WARN  [http-nio-8080-exec-142] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.260 WARN  [http-nio-8080-exec-145] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.267 WARN  [http-nio-8080-exec-146] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.276 WARN  [http-nio-8080-exec-147] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.285 WARN  [http-nio-8080-exec-149] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.264 WARN  [http-nio-8080-exec-144] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.292 WARN  [http-nio-8080-exec-150] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.299 WARN  [http-nio-8080-exec-152] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.288 WARN  [http-nio-8080-exec-148] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.304 WARN  [http-nio-8080-exec-153] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.304 WARN  [http-nio-8080-exec-151] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.314 WARN  [http-nio-8080-exec-154] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.318 WARN  [http-nio-8080-exec-156] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.322 INFO  [http-nio-8080-exec-157] o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target [/JSPWiki/wiki/${jndi:dns://MDEDiscovery2d7ebdf2dfApacheJspWiki-8080} ]. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:492) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:270) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+2025-10-24 13:12:01.342 WARN  [http-nio-8080-exec-160] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.333 WARN  [http-nio-8080-exec-161] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.352 WARN  [http-nio-8080-exec-162] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.333 WARN  [http-nio-8080-exec-155] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.352 WARN  [http-nio-8080-exec-159] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.356 WARN  [http-nio-8080-exec-158] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.865 WARN  [http-nio-8080-exec-8] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.357 WARN  [http-nio-8080-exec-163] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.358 WARN  [http-nio-8080-exec-164] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.370 WARN  [http-nio-8080-exec-165] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.374 WARN  [http-nio-8080-exec-166] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.936 WARN  [http-nio-8080-exec-8] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.374 WARN  [http-nio-8080-exec-167] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.938 WARN  [http-nio-8080-exec-158] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.939 WARN  [http-nio-8080-exec-162] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.386 WARN  [http-nio-8080-exec-169] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.390 WARN  [http-nio-8080-exec-170] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.406 WARN  [http-nio-8080-exec-171] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.378 WARN  [http-nio-8080-exec-168] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.960 WARN  [http-nio-8080-exec-14] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.411 WARN  [http-nio-8080-exec-173] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.412 WARN  [http-nio-8080-exec-172] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.412 WARN  [http-nio-8080-exec-175] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.412 WARN  [http-nio-8080-exec-174] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.415 WARN  [http-nio-8080-exec-176] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.428 WARN  [http-nio-8080-exec-177] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.429 WARN  [http-nio-8080-exec-178] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.429 WARN  [http-nio-8080-exec-180] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.429 WARN  [http-nio-8080-exec-179] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.972 WARN  [http-nio-8080-exec-180] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.429 WARN  [http-nio-8080-exec-181] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.454 WARN  [http-nio-8080-exec-182] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.469 WARN  [http-nio-8080-exec-185] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.975 WARN  [http-nio-8080-exec-164] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.468 WARN  [http-nio-8080-exec-184] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.482 WARN  [http-nio-8080-exec-186] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.492 WARN  [http-nio-8080-exec-187] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.992 WARN  [http-nio-8080-exec-176] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.496 WARN  [http-nio-8080-exec-189] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.497 WARN  [http-nio-8080-exec-188] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.470 WARN  [http-nio-8080-exec-183] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.506 WARN  [http-nio-8080-exec-190] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.513 WARN  [http-nio-8080-exec-191] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.524 WARN  [http-nio-8080-exec-193] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.527 WARN  [http-nio-8080-exec-195] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.527 WARN  [http-nio-8080-exec-194] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.539 WARN  [http-nio-8080-exec-196] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.512 WARN  [http-nio-8080-exec-192] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.540 WARN  [http-nio-8080-exec-197] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.558 WARN  [http-nio-8080-exec-198] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.568 WARN  [http-nio-8080-exec-202] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.568 WARN  [http-nio-8080-exec-201] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.558 WARN  [http-nio-8080-exec-199] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.561 WARN  [http-nio-8080-exec-200] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.582 WARN  [http-nio-8080-exec-204] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.583 WARN  [http-nio-8080-exec-203] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.600 WARN  [http-nio-8080-exec-205] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:02.018 WARN  [http-nio-8080-exec-110] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.600 WARN  [http-nio-8080-exec-206] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.802 WARN  [http-nio-8080-exec-2] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:01.802 WARN  [http-nio-8080-exec-4] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:02.106 WARN  [http-nio-8080-exec-114] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:02.113 WARN  [http-nio-8080-exec-113] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:02.128 WARN  [http-nio-8080-exec-111] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:02.160 WARN  [http-nio-8080-exec-115] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:02.170 WARN  [http-nio-8080-exec-119] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:02.174 WARN  [http-nio-8080-exec-120] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:02.194 WARN  [http-nio-8080-exec-121] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:02.199 WARN  [http-nio-8080-exec-124] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:02.199 WARN  [http-nio-8080-exec-117] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:02.232 WARN  [http-nio-8080-exec-128] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:02.232 WARN  [http-nio-8080-exec-127] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:02.264 WARN  [http-nio-8080-exec-123] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:02.282 WARN  [http-nio-8080-exec-129] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:02.285 WARN  [http-nio-8080-exec-130] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:02.318 WARN  [http-nio-8080-exec-134] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:02.418 WARN  [http-nio-8080-exec-139] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:02.434 WARN  [http-nio-8080-exec-138] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:03.005 INFO  [http-nio-8080-exec-132] o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target [/?x=${jndi:dns://MDEDiscovery2d7ebdf2dfxParam-8080} ]. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:484) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:270) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+2025-10-24 13:12:03.282 WARN  [http-nio-8080-exec-140] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.
+2025-10-24 13:12:03.394 WARN  [http-nio-8080-exec-145] c.c.g.s.JwtAuthenticationFilter - No JWT token found in request header.

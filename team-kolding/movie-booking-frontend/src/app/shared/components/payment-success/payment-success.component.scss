@@ -1,0 +1,15 @@
+.ps-backdrop { position: fixed; inset:0; background: rgba(0,0,0,.55); backdrop-filter: blur(2px); animation: fade .25s ease; }
+.ps-card { position: fixed; inset:50% auto auto 50%; transform: translate(-50%, -50%); width: min(92vw, 400px); background: linear-gradient(145deg,#111,#1b1b1d); border: 1px solid #2c2c2f; border-radius: 20px; padding: 2.25rem 1.75rem 2rem; text-align: center; color:#fff; box-shadow: 0 20px 55px -10px rgba(0,0,0,.65); animation: pop .4s cubic-bezier(.33,1.56,.64,1); }
+.icon-wrap { width: 120px; height: 120px; margin: 0 auto 1rem; position: relative; }
+.circle { width: 100%; height: 100%; }
+.ring { fill: none; stroke: #1f6f34; stroke-width: 6; stroke-linecap: round; filter: drop-shadow(0 0 6px rgba(40,200,90,.45)); stroke-dasharray: 339.292; stroke-dashoffset: 339.292; animation: ring 1s ease forwards .1s; }
+.check { fill: none; stroke: #34c759; stroke-width: 8; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 80; stroke-dashoffset: 80; animation: check 0.6s ease forwards .55s; filter: drop-shadow(0 0 4px rgba(52,199,89,.6)); }
+.title { margin: .25rem 0 .5rem; font-size: 1.35rem; letter-spacing: .5px; }
+.meta { margin: 0 0 1.25rem; font-size: .9rem; opacity:.85; }
+.ok-btn { background: #34c759; color:#081509; font-weight:600; border:none; padding:.75rem 1.25rem; border-radius: 999px; cursor:pointer; font-size:.9rem; letter-spacing:.5px; box-shadow:0 4px 14px -4px rgba(52,199,89,.5); transition: background .2s, transform .2s; }
+.ok-btn:hover { background:#2fb952; }
+.ok-btn:active { transform: translateY(2px); }
+@keyframes fade { from { opacity:0; } to { opacity:1; } }
+@keyframes pop { 0% { transform: translate(-50%, -46%) scale(.85); opacity:0; } 50% { opacity:1; } 100% { transform: translate(-50%, -50%) scale(1); opacity:1; } }
+@keyframes ring { to { stroke-dashoffset: 0; } }
+@keyframes check { to { stroke-dashoffset: 0; } }

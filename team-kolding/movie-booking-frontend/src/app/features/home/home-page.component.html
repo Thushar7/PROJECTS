@@ -1,0 +1,28 @@
+@if (heroMovie(); as movie) {
+  <app-hero-banner
+    [title]="movie.title"
+    [subtitle]="movie.description"
+    [backgroundImage]="movie.bannerUrl ?? movie.posterUrl ?? ''"
+    ctaText="Book Now"
+    ctaAriaLabel="Book tickets for {{ movie.title }}"
+    ctaLink="/showtimes/2"
+  />
+}
+
+@if (showRecommendations()) {
+  <section class="recommended" aria-label="Recommended movies">
+    <app-movie-carousel title="Recommended for you" [movies]="recommendedMovies()" />
+  </section>
+} @else {
+  @if (recommendedMovies().length === 0 && heroMovie()) {
+    <!-- No recommendations to show; silently skip section -->
+  }
+}
+
+<app-featuring-now />
+
+<main class="home-content" aria-label="Movie categories">
+  @for (cat of categories(); track cat.key) {
+    <app-movie-carousel [title]="cat.label" [movies]="cat.movies" />
+  }
+</main>

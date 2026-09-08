@@ -1,0 +1,15 @@
+<div class="poster-upload-page">
+  <h1>Upload Poster</h1>
+  <p class="small">Movie ID: {{ movieId() }}</p>
+  <div class="upload-box" [class.uploading]="uploading()">
+    <input id="fileInput" type="file" accept="image/jpeg,image/png" (change)="onFileChange($event)" />
+    <div class="preview" *ngIf="previewUrl()">
+      <img [src]="previewUrl()" alt="Poster preview" />
+    </div>
+  </div>
+  <div class="actions">
+    <button type="button" (click)="upload()" [disabled]="!canUpload()">Upload Poster</button>
+    <a routerLink="/movies" class="secondary">Skip for now</a>
+  </div>
+  <p class="error" *ngIf="error()">{{ error() }}</p>
+</div>

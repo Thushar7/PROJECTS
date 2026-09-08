@@ -1,0 +1,142 @@
+// ======================
+// User Service
+// ======================
+Table users {
+  user_id int [pk, increment]
+  name varchar
+  email varchar [unique]
+  password_hash varchar
+  role varchar // USER / ADMIN
+  created_at datetime
+}
+
+// ======================
+// Movie Service
+// ======================
+Table movies {
+  movie_id int [pk, increment]
+  title varchar
+  duration int
+  release_date date
+  description text
+}
+
+Table genres {
+  genre_id int [pk, increment]
+  name varchar
+}
+
+Table languages {
+  language_id int [pk, increment]
+  name varchar
+}
+
+Table movie_genres {
+  id int [pk, increment]
+  movie_id int
+  genre_id int
+}
+
+Table movie_languages {
+  id int [pk, increment]
+  movie_id int
+  language_id int
+}
+
+// ======================
+// Theater & Showtime Service
+// ======================
+Table theaters {
+  theater_id int [pk, increment]
+  name varchar
+  location varchar
+  city varchar
+}
+
+Table screens {
+  screen_id int [pk, increment]
+  theater_id int
+  name varchar
+  total_seats int
+}
+
+Table showtimes {
+  showtime_id int [pk, increment]
+  movie_id int
+  screen_id int
+  start_time datetime
+  end_time datetime
+}
+
+// ======================
+// Booking Service
+// ======================
+Table bookings {
+  booking_id int [pk, increment]
+  user_id int
+  showtime_id int
+  status varchar // CONFIRMED, CANCELED, PENDING
+  payment_id int
+  created_at datetime
+  updated_at datetime
+}
+
+Table booking_seats {
+  booking_seat_id int [pk, increment]
+  booking_id int
+  seat_number varchar
+  seat_type varchar // Gold, Silver, Platinum
+}
+
+// ======================
+// Payment Service
+// ======================
+Table payments {
+  payment_id int [pk, increment]
+  booking_id int
+  amount decimal
+  status varchar // PENDING, SUCCESS, FAILED, REFUNDED
+  transaction_ref varchar
+  payment_method varchar // UPI, CARD, NETBANKING
+  created_at datetime
+}
+
+// ======================
+// Notification Service
+// ======================
+Table notification_logs {
+  notification_id int [pk, increment]
+  user_id int
+  booking_id int
+  message text
+  status varchar // SENT, FAILED
+  created_at datetime
+}
+
+// ======================
+// Relationships (Logical Joins)
+// ======================
+
+// Movie Service
+Ref: movie_genres.movie_id > movies.movie_id
+Ref: movie_genres.genre_id > genres.genre_id
+Ref: movie_languages.movie_id > movies.movie_id
+Ref: movie_languages.language_id > languages.language_id
+
+// Theater Service
+Ref: screens.theater_id > theaters.theater_id
+Ref: showtimes.movie_id > movies.movie_id
+Ref: showtimes.screen_id > screens.screen_id
+
+// Booking Service
+Ref: bookings.user_id > users.user_id
+Ref: bookings.showtime_id > showtimes.showtime_id
+Ref: booking_seats.booking_id > bookings.booking_id
+Ref: bookings.payment_id > payments.payment_id
+
+// Payment Service
+Ref: payments.booking_id > bookings.booking_id
+
+// Notification Service
+Ref: notification_logs.user_id > users.user_id
+Ref: notification_logs.booking_id > bookings.booking_id

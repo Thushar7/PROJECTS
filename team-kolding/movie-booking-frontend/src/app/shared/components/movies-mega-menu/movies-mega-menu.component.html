@@ -1,0 +1,29 @@
+<div class="mega-inner" role="menu" aria-label="Browse movies by genre or language">
+  <div class="columns">
+    <div class="col">
+      <h3>Genres</h3>
+      <div class="scroll-list" *ngIf="genres().length; else genresLoading">
+        <button type="button" (click)="onGenre(g)" class="item" *ngFor="let g of genres()">{{ g }}</button>
+      </div>
+      <ng-template #genresLoading>
+        <div class="loading" *ngIf="loading(); else noGenres">Loading genres...</div>
+        <ng-template #noGenres>
+          <div class="empty">No genres</div>
+        </ng-template>
+      </ng-template>
+    </div>
+    <div class="col">
+      <h3>Languages</h3>
+      <div class="scroll-list" *ngIf="languages().length; else langsLoading">
+        <button type="button" (click)="onLanguage(l)" class="item" *ngFor="let l of languages()">{{ l }}</button>
+      </div>
+      <ng-template #langsLoading>
+        <div class="loading" *ngIf="loading(); else noLangs">Loading languages...</div>
+        <ng-template #noLangs>
+          <div class="empty">No languages</div>
+        </ng-template>
+      </ng-template>
+    </div>
+  </div>
+  <div class="status" *ngIf="error()">{{ error() }}</div>
+</div>

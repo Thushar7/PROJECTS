@@ -1,0 +1,18 @@
+@if (movies.length) {
+  <section class="carousel">
+    <header class="carousel__header">
+      <h2>{{ title }}</h2>
+      <div class="controls">
+  <button type="button" class="nav-btn" aria-label="Previous" (click)="scroll('prev')"
+    [disabled]="!canScrollPrev()" [attr.aria-disabled]="!canScrollPrev()">&#10094;</button>
+  <button type="button" class="nav-btn" aria-label="Next" (click)="scroll('next')"
+    [disabled]="!canScrollNext()" [attr.aria-disabled]="!canScrollNext()">&#10095;</button>
+      </div>
+    </header>
+    <div class="carousel__scroller" #scroller>
+      @for (m of movies; track m.id) {
+        <app-movie-card [movie]="m" />
+      }
+    </div>
+  </section>
+}

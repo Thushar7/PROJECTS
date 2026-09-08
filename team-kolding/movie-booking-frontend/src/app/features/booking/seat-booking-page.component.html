@@ -1,0 +1,76 @@
+@if (loading()) {
+  <div class="state">Loading booking page…</div>
+} @else {
+  @if (error()) {
+    <div class="state error">{{ error() }}</div>
+  } @else {
+    <div class="booking-page">
+      <header class="header hero" [class.loaded]="posterState() === 'loaded'">
+        <div class="hero-bg" *ngIf="posterSrc()" [style.background-image]="'url(' + posterSrc() + ')'"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          @if (movie(); as mv) {
+            <div class="media-block">
+              <div class="poster-wrap" [class.loading]="posterState() === 'loading'" [class.error]="posterState() === 'error'">
+                @if (posterSrc()) { <img [src]="posterSrc()!" [alt]="mv.title + ' poster'" /> } @else { <div class="poster-fallback">{{ mv.title.charAt(0) }}</div> }
+              </div>
+              <div class="info">
+                <h1 class="title">{{ mv.title }}</h1>
+                <p class="meta">{{ mv.year }} • {{ mv.durationMinutes }} min @if (mv.genres?.length) { • {{ (mv.genres || []).join(', ') }} }</p>
+                @if (mv.description) { <p class="desc">{{ mv.description }}</p> }
+              </div>
+            </div>
+          }
+          <div class="details-grid">
+            @if (theatre(); as th) {
+              <div class="detail">
+                <div class="label">Theatre</div>
+                <div class="value">{{ th.name }}</div>
+                <div class="sub-value">{{ (th.city || '') + (th.city && th.state ? ', ' : '') + (th.state || '') }}</div>
+              </div>
+            }
+            @if (showtime(); as st) {
+              <div class="detail">
+                <div class="label">Showtime</div>
+                <div class="value">{{ formatTime(st.startTime) }} – {{ formatTime(st.endTime) }}</div>
+                <div class="sub-value">{{ st.showDate }}</div>
+              </div>
+            }
+          </div>
+        </div>
+      </header>
+
+      <section class="seat-section">
+        @if (!booking()) {
+          @if (showtime(); as st) {
+            <app-seat-selection
+              [showtimeId]="st.showtimeId"
+              [theatreId]="st.theatreId"
+              [movieId]="st.movieId"
+              (bookingCreated)="onBookingCreated($event)"
+            />
+          }
+        }
+      </section>
+
+      @if (booking() && showTicket()) {
+        @if (booking(); as b) {
+          @if (movie(); as mv) {
+            @if (theatre(); as th) {
+              @if (showtime(); as st) {
+                <app-ticket-modal
+                  [booking]="b"
+                  [movie]="mv"
+                  [theatre]="th"
+                  [showtime]="st"
+                  [posterSrc]="posterSrc()"
+                  (close)="closeTicket()"
+                />
+              }
+            }
+          }
+        }
+      }
+    </div>
+  }
+}

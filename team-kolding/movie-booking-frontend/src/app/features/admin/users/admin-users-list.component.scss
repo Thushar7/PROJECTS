@@ -1,0 +1,9 @@
+.admin-users { padding:1rem; }
+.filters { display:flex; gap:.5rem; margin-bottom:.75rem; }
+.data { width:100%; border-collapse:collapse; }
+.data th, .data td { padding:.4rem .5rem; border-bottom:1px solid #333; }
+.data tbody tr { cursor:pointer; }
+.data tbody tr:hover { background:#222; }
+.pager { margin-top:.75rem; display:flex; gap:.5rem; align-items:center; }
+.error { color:#ff6d6d; margin:.5rem 0; }
+.empty { opacity:.7; }

@@ -1,0 +1,59 @@
+2025-10-15 15:28:09.633 INFO  [main] u.service.ServiceApplicationTests - Starting ServiceApplicationTests using Java 21.0.8 with PID 1312 (started by 10840583 in C:\Users\10840583\Downloads\team-kolding\user-service)
+2025-10-15 15:28:09.635 DEBUG [main] u.service.ServiceApplicationTests - Running with Spring Boot v3.5.6, Spring v6.2.11
+2025-10-15 15:28:09.635 INFO  [main] u.service.ServiceApplicationTests - The following 1 profile is active: "test"
+2025-10-15 15:28:09.657 DEBUG [main] o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@16c9f7f0
+2025-10-15 15:28:10.217 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-15 15:28:10.280 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 53 ms. Found 1 JPA repository interface.
+2025-10-15 15:28:10.875 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-15 15:28:10.928 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-15 15:28:10.966 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-15 15:28:11.071 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-15 15:28:11.102 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-10-15 15:28:11.269 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:user_service_test user=SA
+2025-10-15 15:28:11.269 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-10-15 15:28:11.314 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-15 15:28:11.828 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-15 15:28:11.850 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-15 15:28:12.222 DEBUG [main] u.service.security.utils.JwtUtil - [JWT] Initialized key bytes=46 expMs=60000
+2025-10-15 15:28:12.518 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-15 15:28:12.543 DEBUG [main] o.s.s.c.a.a.c.AuthenticationConfiguration$DefaultPasswordEncoderAuthenticationManagerBuilder - No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2025-10-15 15:28:12.629 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - 9 mappings in 'requestMappingHandlerMapping'
+2025-10-15 15:28:12.747 DEBUG [main] o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-10-15 15:28:12.795 DEBUG [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-10-15 15:28:12.911 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-10-15 15:28:12.930 DEBUG [main] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-10-15 15:28:13.131 INFO  [main] u.service.ServiceApplicationTests - Started ServiceApplicationTests in 3.954 seconds (process running for 7.157)
+2025-10-15 15:28:13.284 INFO  [main] u.service.service.UserService - Attempting to update profile for username: missing
+2025-10-15 15:28:13.286 WARN  [main] u.service.service.UserService - Profile update failed: User not found - missing
+2025-10-15 15:28:13.304 INFO  [main] u.service.service.UserService - Attempting login for username: testuser
+2025-10-15 15:28:13.305 WARN  [main] u.service.service.UserService - Login failed: Invalid password for username - testuser
+2025-10-15 15:28:13.310 INFO  [main] u.service.service.UserService - Attempting login for username: testuser
+2025-10-15 15:28:13.310 INFO  [main] u.service.service.UserService - User logged in successfully: testuser
+2025-10-15 15:28:13.318 INFO  [main] u.service.service.UserService - Admin requesting all users list
+2025-10-15 15:28:13.318 INFO  [main] u.service.service.UserService - Retrieved 2 users from database
+2025-10-15 15:28:13.318 DEBUG [main] u.service.service.UserService - Converted 2 users to ProfileResponse objects
+2025-10-15 15:28:13.322 WARN  [main] u.service.service.UserService - Profile retrieval failed: User id not found - 99
+2025-10-15 15:28:13.325 INFO  [main] u.service.service.UserService - Attempting login for username: ghost
+2025-10-15 15:28:13.325 WARN  [main] u.service.service.UserService - Login failed: User not found - ghost
+2025-10-15 15:28:13.334 INFO  [main] u.service.service.UserService - Attempting to register user with username: newuser
+2025-10-15 15:28:13.334 INFO  [main] u.service.service.UserService - User registered successfully with ID: 2 and username: newuser
+2025-10-15 15:28:13.341 INFO  [main] u.service.service.UserService - Attempting to register user with username: newuser
+2025-10-15 15:28:13.341 WARN  [main] u.service.service.UserService - Registration failed: Email already in use - test@example.com
+2025-10-15 15:28:13.352 INFO  [main] u.service.service.UserService - Attempting to update profile for username: testuser
+2025-10-15 15:28:13.352 DEBUG [main] u.service.service.UserService - Password updated for user ID: 1
+2025-10-15 15:28:13.352 DEBUG [main] u.service.service.UserService - Genre preference updated for user ID: 1
+2025-10-15 15:28:13.352 DEBUG [main] u.service.service.UserService - Language preference updated for user ID: 1
+2025-10-15 15:28:13.352 INFO  [main] u.service.service.UserService - Profile updated successfully for user ID: 1
+2025-10-15 15:28:13.363 INFO  [main] u.service.service.UserService - Attempting to register user with username: testuser
+2025-10-15 15:28:13.363 WARN  [main] u.service.service.UserService - Registration failed: Username already taken - testuser
+2025-10-15 15:28:13.366 DEBUG [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@16c9f7f0, started on Wed Oct 15 15:28:09 IST 2025
+2025-10-15 15:28:13.383 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-15 15:28:13.383 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-10-15 15:28:13.391 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

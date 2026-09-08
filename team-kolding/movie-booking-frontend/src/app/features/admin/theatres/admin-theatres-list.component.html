@@ -1,0 +1,51 @@
+<section class="admin-theatres">
+  <h1>Theatres</h1>
+  @if (error()) { <div class="error">{{ error() }}</div> }
+  <div class="toolbar">
+    <button type="button" class="primary" (click)="openModal()">Add Theatre</button>
+  </div>
+  @if (showModal()) {
+    <div class="modal-backdrop" (click)="closeModal()"></div>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="theatreModalTitle" (keydown)="onKeydown($event)">
+      <form (submit)="$event.preventDefault(); submit();">
+        <header class="modal-header">
+          <h2 id="theatreModalTitle">Add Theatre</h2>
+          <button type="button" class="close" aria-label="Close" (click)="closeModal()" [disabled]="creating()">×</button>
+        </header>
+        <div class="modal-body">
+          <label>
+            Name *
+            <input id="theatre-name-input" type="text" [(ngModel)]="newName" name="name" required placeholder="e.g. Galaxy Cinema" />
+          </label>
+          <label>
+            City
+            <input type="text" [(ngModel)]="newCity" name="city" placeholder="City" />
+          </label>
+          <label>
+            State
+            <input type="text" [(ngModel)]="newState" name="state" placeholder="State" />
+          </label>
+          @if (createError()) { <div class="error">{{ createError() }}</div> }
+        </div>
+        <footer class="modal-footer">
+          <button type="button" (click)="closeModal()" [disabled]="creating()">Cancel</button>
+          <button type="submit" class="primary" [disabled]="!canSubmit()">{{ creating() ? 'Creating...' : 'Create' }}</button>
+        </footer>
+      </form>
+    </div>
+  }
+  <table class="data" *ngIf="theatres().length; else empty">
+    <thead><tr><th>ID</th><th>Name</th><th>City</th><th>State</th></tr></thead>
+    <tbody>
+      @for (t of theatres(); track t.theatreId) {
+        <tr>
+          <td>{{ t.theatreId }}</td>
+          <td>{{ t.name }}</td>
+          <td>{{ t.city }}</td>
+          <td>{{ t.state }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+  <ng-template #empty><p class="empty">No theatres found.</p></ng-template>
+</section>

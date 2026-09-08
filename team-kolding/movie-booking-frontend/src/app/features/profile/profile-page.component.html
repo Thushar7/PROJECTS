@@ -1,0 +1,122 @@
+@if (authService.user()) {
+<div class="profile-wrapper">
+  <h1>Your Profile</h1>
+  <div class="tabs" role="tablist" aria-label="Profile sections">
+    <button role="tab" [attr.aria-selected]="activeTab() === 'personal'" (click)="setTab('personal')" [class.active]="activeTab() === 'personal'" id="tab-personal" aria-controls="panel-personal">Personal Information</button>
+    <button role="tab" [attr.aria-selected]="activeTab() === 'preferences'" (click)="setTab('preferences')" [class.active]="activeTab() === 'preferences'" id="tab-preferences" aria-controls="panel-preferences">Preferences</button>
+    <button role="tab" [attr.aria-selected]="activeTab() === 'security'" (click)="setTab('security')" [class.active]="activeTab() === 'security'" id="tab-security" aria-controls="panel-security">Account Security</button>
+  </div>
+
+  @if (authService.profile()) {
+  <section class="profile-card">
+    <!-- Personal Tab -->
+  @if (activeTab() === 'personal') {
+  <div role="tabpanel" id="panel-personal" aria-labelledby="tab-personal" class="tab-panel">
+      @if (!personalEditing()) {
+        <div class="row">
+          <span class="label">Username</span>
+          <span class="value">{{ authService.profile()?.username }}</span>
+        </div>
+        @if (authService.profile()?.email) {
+        <div class="row">
+          <span class="label">Email</span>
+          <span class="value">{{ authService.profile()?.email }}</span>
+        </div>
+        }
+        @if (authService.profile()?.roles?.length) {
+        <div class="row">
+          <span class="label">Roles</span>
+          <span class="value">{{ authService.profile()?.roles?.join(', ') }}</span>
+        </div>
+        }
+      @if (authService.profile()?.createdAt; as created) {
+        <div class="row">
+          <span class="label">Joined</span>
+          <span class="value">{{ created | date:'mediumDate' }}</span>
+        </div>
+        }
+        <div class="row actions">
+          <button type="button" (click)="startEditPersonal()" [disabled]="authService.loading()">Edit</button>
+          @if (personalSuccess()) { <span class="success">Updated.</span> }
+          @if (authService.error() && !authService.loading()) { <span class="error">{{ authService.error() }}</span> }
+        </div>
+      } @else {
+        <form class="edit-personal" (ngSubmit)="savePersonal()" novalidate>
+          <div class="row">
+            <label class="label" for="editUsername">Username</label>
+            <input id="editUsername" class="value" name="editUsername" [(ngModel)]="editUsername"
+                   required minlength="2" />
+          </div>
+          <div class="row">
+            <label class="label" for="editEmail">Email</label>
+            <input id="editEmail" class="value" name="editEmail" type="email" [(ngModel)]="editEmail" required />
+          </div>
+          <div class="row actions">
+            <button type="button" class="secondary" (click)="cancelEditPersonal()" [disabled]="personalSaving()">Cancel</button>
+            <button type="submit" [disabled]="personalSaving() || !editUsername() || !editEmail()">{{ personalSaving() ? 'Saving...' : 'Save' }}</button>
+          </div>
+          @if (authService.error() && !personalSaving()) { <div class="row"><span class="error">{{ authService.error() }}</span></div> }
+        </form>
+      }
+    </div>
+    }
+
+    <!-- Preferences Tab -->
+    @if (activeTab() === 'preferences') {
+    <div role="tabpanel" id="panel-preferences" aria-labelledby="tab-preferences" class="tab-panel">
+      <form class="pref-form" (ngSubmit)="onSavePreferences()" novalidate>
+        <div class="row pref-row">
+          <label class="label" for="genrePref">Preferred Genre</label>
+          <select id="genrePref" class="value" [(ngModel)]="genrePreference" name="genrePref">
+            <option [ngValue]="undefined">-- None --</option>
+            @for (g of genres(); track g) {
+            <option [value]="g">{{ g }}</option>
+            }
+          </select>
+        </div>
+        <div class="row pref-row">
+          <label class="label" for="langPref">Preferred Language</label>
+          <select id="langPref" class="value" [(ngModel)]="languagePreference" name="langPref">
+            <option [ngValue]="undefined">-- None --</option>
+            @for (l of languages(); track l) {
+            <option [value]="l">{{ l }}</option>
+            }
+          </select>
+        </div>
+        <div class="row actions pref-actions">
+          <button type="submit" [disabled]="!canSubmit() || saving()">{{ saving() ? 'Saving...' : 'Save Preferences' }}</button>
+          @if (saveSuccess()) { <span class="success">Preferences saved.</span> }
+          @if (authService.error() && !saving()) { <span class="error">{{ authService.error() }}</span> }
+        </div>
+      </form>
+    </div>
+    }
+
+    <!-- Security Tab -->
+    @if (activeTab() === 'security') {
+    <div role="tabpanel" id="panel-security" aria-labelledby="tab-security" class="tab-panel">
+      <div class="row actions">
+        <a routerLink="/reset-password" class="reset-link">Change Password</a>
+      </div>
+      <p class="hint">For security, you will be redirected to the password reset flow.</p>
+    </div>
+    }
+  </section>
+  } @else {
+    @if (authService.loading()) {
+      <div class="state">Loading profile...</div>
+    } @else {
+      @if (authService.error()) {
+        <div class="state error">{{ authService.error() }}</div>
+      } @else {
+        <div class="state">No profile data.</div>
+      }
+    }
+  }
+</div>
+} @else {
+  <div class="login-prompt">
+    <p>You need to login to view your profile.</p>
+    <a routerLink="/login">Go to Login</a>
+  </div>
+}

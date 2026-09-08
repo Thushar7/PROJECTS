@@ -1,0 +1,149 @@
+@if (movieId(); as mid) {
+  <div class="showtimes-wrapper">
+    <header class="movie-header">
+      @if (movie(); as mv) {
+        <div class="poster" *ngIf="mv.posterUrl">
+          <img [src]="mv.posterUrl" [alt]="mv.title" />
+        </div>
+        <div class="info">
+          <h1 class="title">{{ mv.title }}</h1>
+          <div class="facts">
+            <span class="year">{{ mv.year }}</span>
+            <span class="dot">•</span>
+            <span class="duration">{{ mv.durationMinutes }} min</span>
+            @if (mv.genres?.length) {
+              <span class="dot">•</span>
+              <span class="genres">{{ (mv.genres || []).join(', ') }}</span>
+            }
+            @if (mv.rating) {
+              <span class="dot">•</span>
+              <span class="rating">Rating: {{ mv.rating | number:'1.1-1' }}/10</span>
+            }
+          </div>
+          @if (mv.description) {
+            <p class="overview">{{ mv.description }}</p>
+          }
+        </div>
+      } @else {
+        <h1>Showtimes</h1>
+        <p class="subtitle">Movie ID: {{ mid }}</p>
+      }
+    </header>
+
+    @if (loading() && !error()) {
+      <div class="state">Loading showtimes…</div>
+    }
+
+@if (canAddShowtime()) {
+  <div class="admin-actions">
+    <button type="button" class="add-showtime-btn" (click)="openAddShowtime()">+ Add Showtime</button>
+  </div>
+}
+
+@if (adding()) {
+  <div class="modal-backdrop" (click)="closeAddShowtime()"></div>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="addShowtimeTitle">
+    <div class="modal-header">
+      <h2 id="addShowtimeTitle">Add Showtime</h2>
+      <button type="button" class="close-btn" (click)="closeAddShowtime()" aria-label="Close">×</button>
+    </div>
+    <div class="modal-body">
+      <form (ngSubmit)="submitNewShowtime()" novalidate>
+        <div class="field-row">
+          <div class="field-group">
+            <label>Movie ID</label>
+            <input type="text" [value]="movieId()" disabled />
+          </div>
+          <div class="field-group">
+            <label>Theatre</label>
+            <select [ngModel]="formTheatreId()" name="theatreId" (ngModelChange)="formTheatreId.set(+($event))" required>
+              <option value="" disabled>Select theatre</option>
+              @for (t of theatreOptions(); track t.theatreId) { <option [value]="t.theatreId">{{ t.name }}</option> }
+            </select>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field-group">
+            <label>Show Date</label>
+            <input type="date" [ngModel]="formShowDate()" name="showDate" (ngModelChange)="formShowDate.set($event)" required />
+          </div>
+          <div class="field-group">
+            <label>Start Time</label>
+            <input type="time" [ngModel]="formStartTime()" name="startTime" (ngModelChange)="formStartTime.set($event)" required />
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field-group">
+            <label>End Date</label>
+            <input type="date" [ngModel]="formEndDate()" name="endDate" (ngModelChange)="formEndDate.set($event)" />
+          </div>
+          <div class="field-group">
+            <label>End Time</label>
+            <input type="time" [ngModel]="formEndTime()" name="endTime" (ngModelChange)="formEndTime.set($event)" required />
+          </div>
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="secondary" (click)="closeAddShowtime()" [disabled]="addSubmitting()">Cancel</button>
+          <button type="submit" [disabled]="!canSubmitNew()">Create</button>
+        </div>
+        <p class="error" *ngIf="addError()">{{ addError() }}</p>
+      </form>
+    </div>
+  </div>
+}
+    @if (error()) {
+      <div class="state error">{{ error() }}</div>
+    }
+    @if (!loading() && !error() && (cities().length || states().length)) {
+      <div class="filters-bar">
+        <div class="field">
+          <label for="stateSel">State</label>
+          <select id="stateSel" [value]="selectedState() || ''" (change)="selectedState.set(($any($event.target).value)||null)">
+            <option value="">All</option>
+            @for (s of states(); track s) { <option [value]="s">{{ s }}</option> }
+          </select>
+        </div>
+        <div class="field">
+          <label for="citySel">City</label>
+          <select id="citySel" [disabled]="!selectedState()" [value]="selectedCity() || ''" (change)="selectedCity.set(($any($event.target).value)||null)">
+            <option value="">{{ selectedState() ? 'All' : 'Select state first' }}</option>
+            @for (c of cities(); track c) { <option [value]="c">{{ c }}</option> }
+          </select>
+        </div>
+        <div class="actions">
+          <button type="button" class="clear-btn" (click)="clearFilters()" [disabled]="!selectedCity() && !selectedState()">Clear</button>
+        </div>
+      </div>
+      <div class="filter-summary" *ngIf="groupedByDate().length">
+        Showing {{ totalVisibleShowtimes() }} showtime(s)
+      </div>
+    }
+    @if (!loading() && !error() && groupedByDate().length === 0) {
+      <div class="state">No showtimes scheduled.</div>
+    }
+
+    @if (!loading() && !error() && groupedByDate().length) {
+      <div class="date-groups">
+        @for (group of groupedByDate(); track group.date) {
+          <section class="date-group">
+            <h2 class="date-heading">{{ group.date }}</h2>
+            <ul class="showtime-list">
+              @for (s of group.items; track s.showtimeId) {
+                <li class="showtime-item">
+                  <button type="button" class="showtime-btn" aria-label="Select showtime starting {{ formatTime(s.startTime) }}" (click)="selectShowtime(s)">
+                    <span class="time-range">
+                      <span class="start">{{ formatTime(s.startTime) }}</span>
+                      <span class="dash">–</span>
+                      <span class="end">{{ formatTime(s.endTime) }}</span>
+                    </span>
+                    <span class="theatre">{{ theatreLabel(s.theatreId) }}</span>
+                  </button>
+                </li>
+              }
+            </ul>
+          </section>
+        }
+      </div>
+    }
+  </div>
+}

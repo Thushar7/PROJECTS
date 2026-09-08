@@ -1,0 +1,21 @@
+<section class="admin-bookings">
+  <h1>Bookings</h1>
+  @if (error()) { <div class="error">{{ error() }}</div> }
+  <table class="data" *ngIf="bookings().length; else empty">
+    <thead><tr><th>ID</th><th>User</th><th>Movie</th><th>Theatre</th><th>Showtime</th><th>Seats</th><th>Status</th></tr></thead>
+    <tbody>
+      @for (b of bookings(); track b.bookingId) {
+        <tr>
+          <td>{{ b.bookingId }}</td>
+          <td>{{ b.userId }}</td>
+          <td>{{ b.movieId }}</td>
+          <td>{{ b.theatreId }}</td>
+          <td>{{ b.showtimeId }}</td>
+          <td>{{ b.seatNumbers.join(',') }}</td>
+          <td>{{ b.bookingStatus }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+  <ng-template #empty><p class="empty">No bookings found.</p></ng-template>
+</section>

@@ -1,0 +1,73 @@
+<div class="payment-backdrop" role="presentation"></div>
+<div class="payment-dialog" role="dialog" aria-modal="true" aria-labelledby="paymentTitle">
+  <header class="dialog-header">
+    <h2 id="paymentTitle">Complete Payment</h2>
+    <button type="button" class="close-btn" (click)="cancel.emit()" aria-label="Close payment dialog">×</button>
+  </header>
+  <div class="dialog-body">
+    <p class="amount">Pay <strong>{{ amount | currency:currencyCode:'symbol':'1.0-0' }}</strong></p>
+    <fieldset class="methods" [attr.aria-busy]="processing()">
+      <legend class="visually-hidden">Select a payment method</legend>
+      <ul class="method-list">
+        <li>
+          <button type="button" class="method-btn" [class.selected]="selectedMethod()==='UPI'" (click)="choose('UPI')">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64" role="img" focusable="false">
+                <rect x="6" y="14" width="52" height="36" rx="10" fill="#0d4b3e" />
+                <path d="M18 32h14l-4 10h8l4-20H26l2-6h-8l-4 16z" fill="#fff" />
+              </svg>
+            </span>
+            <span class="text">UPI</span>
+            <span class="radio" aria-hidden="true"></span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="method-btn" [class.selected]="selectedMethod()==='Credit Card'" (click)="choose('Credit Card')">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64" role="img" focusable="false">
+                <rect x="4" y="12" width="56" height="40" rx="10" fill="#1e2a52" />
+                <rect x="4" y="22" width="56" height="8" fill="#31416b" />
+                <rect x="12" y="36" width="18" height="6" rx="2" fill="#fff" />
+                <rect x="36" y="36" width="16" height="6" rx="2" fill="#fff" />
+              </svg>
+            </span>
+            <span class="text">Credit Card</span>
+            <span class="radio" aria-hidden="true"></span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="method-btn" [class.selected]="selectedMethod()==='Debit Card'" (click)="choose('Debit Card')">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64" role="img" focusable="false">
+                <rect x="4" y="12" width="56" height="40" rx="10" fill="#704027" />
+                <rect x="4" y="22" width="56" height="8" fill="#8a5337" />
+                <rect x="12" y="36" width="24" height="6" rx="2" fill="#fff" />
+              </svg>
+            </span>
+            <span class="text">Debit Card</span>
+            <span class="radio" aria-hidden="true"></span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="method-btn" [class.selected]="selectedMethod()==='Internet Banking'" (click)="choose('Internet Banking')">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64" role="img" focusable="false">
+                <circle cx="32" cy="32" r="28" fill="#12324a" />
+                <path d="M18 44c2-10 10-16 14-16s12 6 14 16H18z" fill="#fff" opacity=".9" />
+                <path d="M30 20h4v10h-4z" fill="#fff" />
+              </svg>
+            </span>
+            <span class="text">Internet Banking</span>
+            <span class="radio" aria-hidden="true"></span>
+          </button>
+        </li>
+      </ul>
+    </fieldset>
+  </div>
+  <footer class="dialog-footer">
+    <button type="button" (click)="cancel.emit()" [disabled]="processing()">Cancel</button>
+    <button type="button" class="primary" (click)="submit()" [disabled]="!selectedMethod() || processing()">
+      @if (processing()) { Processing… } @else { Pay Now }
+    </button>
+  </footer>
+</div>

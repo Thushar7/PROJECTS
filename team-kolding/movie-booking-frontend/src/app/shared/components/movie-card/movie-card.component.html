@@ -1,0 +1,14 @@
+<article class="movie-card" [class.movie-card--dense]="dense" tabindex="0" aria-label="{{ movie.title }} movie card">
+  <div class="poster-wrapper" [class.is-loading]="posterState() === 'loading'">
+    <img [src]="posterSrc()" [alt]="movie.title + ' poster'" loading="lazy" />
+    @if (posterState() === 'loading') {
+      <span class="loading-overlay">Loading…</span>
+    }
+    @if (posterState() === 'error') {
+      <span class="error-overlay">Image unavailable</span>
+    }
+    @if (movie.rating) {<span class="rating">{{ movie.rating | number : '1.1-1' }}</span>}
+  </div>
+  <h3 class="title" title="{{ movie.title }}">{{ movie.title }}</h3>
+  <p class="meta">{{ movie.year }} • {{ movie.durationMinutes }}m</p>
+</article>

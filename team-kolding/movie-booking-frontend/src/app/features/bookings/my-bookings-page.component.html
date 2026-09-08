@@ -1,0 +1,33 @@
+<div class="my-bookings-wrapper">
+  <h1>My Bookings</h1>
+  @if (loading()) {
+    <div class="state">Loading your bookings...</div>
+  } @else if (error()) {
+    <div class="state error">{{ error() }}</div>
+  } @else if (!hasBookings()) {
+    <div class="state">You have no bookings yet.</div>
+  } @else {
+    <div class="bookings-list" role="table" aria-label="Your bookings">
+      <div class="header" role="row">
+        <div role="columnheader">Booking #</div>
+        <div role="columnheader">Showtime</div>
+        <div role="columnheader">Seats</div>
+        <div role="columnheader">Amount</div>
+        <div role="columnheader">Status</div>
+        <div role="columnheader" class="actions-col">Actions</div>
+      </div>
+      <div class="row" role="row" *ngFor="let b of bookings(); trackBy: trackBooking">
+        <div role="cell">{{ b.bookingId }}</div>
+        <div role="cell">{{ b.showtimeId }}</div>
+  <div role="cell">{{ b.seatNumbers.join(', ') }}</div>
+        <div role="cell">{{ b.totalAmount | currency:'USD':'symbol':'1.0-0' }}</div>
+        <div role="cell">
+          <span class="status" [ngClass]="statusClass(b.bookingStatus)">{{ b.bookingStatus }}</span>
+        </div>
+        <div role="cell" class="actions-col">
+          <button type="button" class="cancel-btn" (click)="cancel(b)" [disabled]="cancellingIds().has(b.bookingId) || isCancelled(b.bookingStatus)">Cancel</button>
+        </div>
+      </div>
+    </div>
+  }
+</div>

@@ -1,0 +1,19 @@
+<div class="auth-wrapper">
+  <h1>Login</h1>
+  @if (justRegistered()) {
+    <div class="info-banner" role="status" aria-live="polite">Registration successful. Please log in.</div>
+  }
+  <form (ngSubmit)="onSubmit()" #f="ngForm" novalidate>
+    <label>Username
+      <input name="username" [(ngModel)]="username" required />
+    </label>
+    <label>Password
+      <input name="password" type="password" [(ngModel)]="password" required minlength="4" />
+    </label>
+    @if (auth.error()) {
+      <div class="error">{{ auth.error() }}</div>
+    }
+    <button type="submit" [disabled]="auth.loading() || f.invalid">{{ auth.loading() ? 'Logging in...' : 'Login' }}</button>
+  </form>
+  <p class="alt">No account? <a routerLink="/register">Register</a></p>
+</div>

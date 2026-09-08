@@ -1,0 +1,19 @@
+.movies-page { display: grid; grid-template-columns: 260px 1fr; gap: 2rem; padding: 1.5rem 1.25rem 2.5rem; max-width: 1600px; margin: 0 auto; }
+.filters { display: flex; flex-direction: column; gap: 1.25rem; position: sticky; top: 0; align-self: start; }
+.filter-group { display: flex; flex-direction: column; gap: .4rem; }
+.filter-group input, .filter-group select { background: #111; color: #fff; border: 1px solid #333; border-radius: .4rem; padding: .55rem .7rem; font: inherit; }
+.chips { display: flex; flex-wrap: wrap; gap: .5rem; }
+.chip { background: #1e1e1e; color: #bbb; border: 1px solid #333; padding: .35rem .7rem; border-radius: 999px; cursor: pointer; font-size: .75rem; letter-spacing: .5px; text-transform: uppercase; transition: background .2s, color .2s, border-color .2s; }
+.chip--active { background: #e50914; color: #fff; border-color: #e50914; }
+.clear-btn { background: none; border: 1px solid #444; color: #ccc; padding: .5rem .9rem; border-radius: .4rem; cursor: pointer; font-size: .75rem; text-transform: uppercase; letter-spacing: .5px; align-self: flex-start; }
+.clear-btn:hover { background: #222; }
+.results-grid { --min: 160px; display: grid; grid-template-columns: repeat(auto-fill, minmax(var(--min), 1fr)); gap: 1rem; }
+.empty { opacity: .7; }
+@media (max-width: 1050px) { .movies-page { grid-template-columns: 1fr; } .filters { position: static; flex-direction: row; flex-wrap: wrap; } .filter-group { width: 150px; } }
+/* Pagination */
+.pagination { margin-top: 1.5rem; display: flex; align-items: center; justify-content: center; gap: .75rem; flex-wrap: wrap; width: 100%; }
+.pagination .page-list { display: flex; gap: .4rem; flex-wrap: wrap; }
+.page-btn { background: #1e1e1e; color: #ccc; border: 1px solid #333; padding: .45rem .8rem; border-radius: .4rem; cursor: pointer; font-size: .75rem; min-width: 2.25rem; text-align: center; transition: background .2s, color .2s, border-color .2s; }
+.page-btn:hover:not(:disabled) { background: #272727; color: #fff; }
+.page-btn.active { background: #e50914; border-color: #e50914; color: #fff; }
+.page-btn:disabled { opacity: .4; cursor: not-allowed; }
